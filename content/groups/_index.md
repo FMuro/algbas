@@ -539,7 +539,7 @@ Si $\sigma(x)\notin\operatorname{sop}(\sigma)$ entonces $\sigma(\sigma(x))=\sigm
 {{% /proof %}}
 
 {{% remark %}}
-El soporte de una permutación $\sigma$, si no es vacío, ha de tener al menos dos elementos ya que si $\operatorname{sop}(\sigma)=\\{x\\}$, como $\sigma(x)\in\operatorname{sop}(\sigma)$ tendríamos que $\sigma(x)=x$, así que $x\notin\operatorname{sop}(\sigma)$, que es una contradicción. Por tanto los ciclos de soporte no vació tienen como poco longitud $2$. El ciclo de longitud $0$, denotado $()$, es la identidad. De hecho la identidad es la única permutación de soporte vacío.
+El soporte de una permutación $\sigma$, si no es vacío, ha de tener al menos dos elementos ya que si $\operatorname{sop}(\sigma)=\\{x\\}$, como $\sigma(x)\in\operatorname{sop}(\sigma)$ tendríamos que $\sigma(x)=x$, así que $x\notin\operatorname{sop}(\sigma)$, que es una contradicción. Por tanto los ciclos de soporte no vacío tienen como poco longitud $2$. El ciclo de longitud $0$, denotado $()$, es la identidad. De hecho la identidad es la única permutación de soporte vacío.
 {{% /remark %}}
 
 {{% corollary label="cor:soporte" %}}
@@ -611,14 +611,14 @@ por tanto podemos tomar $m=q-p> 0$.
 Sea $m> 0$ el mínimo tal que $\sigma^m(x)=x$. Los elementos de $\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ son todos distintos. Lo veremos por reducción al absurdo. De lo contrario existirían $0\leq p<q<m$ tales que $\sigma^p(x)=\sigma^q(x)=\sigma^{p}(\sigma^{q-p}(x))$. La aplicación $\sigma^p$ es inyectiva por ser una permutación, así que esto implicaría que $x=\sigma^{q-p}(x)$, pero $0 < q-p < m$, lo que contradice la minimalidad de $m$.
 
 Ahora tenemos que ver que, para todo $n\in\mathbb {Z}$, $\sigma^n(x)\in  \\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$.
-Basta comprobar que, $\sigma^n(x)=\sigma^r(x)$ donde $r$ es el resto no negativo de la división de $n$ por $m$, $n=m\cdot c+r$, $0\leq r<m$. En efecto,
+Basta comprobar que $\sigma^n(x)=\sigma^r(x)$, donde $r$ es el resto no negativo de la división de $n$ por $m$, $n=m\cdot c+r$, $0\leq r<m$. En efecto,
 $$
 \begin{array}{rcl}
 \sigma^n(x)&=&\sigma^{r+m\cdot c}(x)\cr
 &=&\sigma^r((\sigma^m)^c(x)).
 \end{array}
 $$
-Como $\sigma^m(x)=x$, entonces $(\sigma^m)^c(x)=0$ si $c\geq 0$. Es más, $\sigma^m(x)=x$ también implica que $x=\sigma^{-m}(x)$, así que $(\sigma^m)^c(x)=0$ también si $c<0$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
+Como $\sigma^m(x)=x$, entonces $(\sigma^m)^c(x)=x$ si $c\geq 0$. Es más, $\sigma^m(x)=x$ también implica que $x=\sigma^{-m}(x)$, así que $(\sigma^m)^c(x)=x$ también si $c<0$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
 
 Hemos probado que $\sigma$ se comporta sobre cada órbita $\bar x=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ como un ciclo de longitud $m$, ya que $\sigma^m(x)=x$, de hecho $m$ era el menor entero positivo que satisfacía esta propiedad. Esto demuestra que $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\\;\sigma(x)\\;\dots\\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\operatorname{sop}(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
 {{% /proof %}}
@@ -768,7 +768,7 @@ $$\operatorname{signo} (\sigma )=\operatorname{signo} (\tau\_1)\cdots\operatorna
 Este corolario es también cierto cambiando *par* por *impar*.
 
 {{% corollary %}}
-El signo de un cliclo de longutud $l$ es $(-1)^{l-1}$.
+El signo de un ciclo de longitud $l$ es $(-1)^{l-1}$.
 {{% /corollary %}}
 
 Este corolario, que es consecuencia de la descomposición de un ciclo como producto de trasposiciones [vista antes,](#cicletransp) nos dice que un ciclo de longitud par es impar y un ciclo de longitud impar es par.
@@ -825,7 +825,7 @@ Un subgrupo $H\subset G$ es un grupo por derecho propio con la operación binari
 
 * El subgrupo $SL(n,k)=\\{A\mid |A|=1\\}\subset GL(n,k)$ de matrices $n\times n$ sobre un cuerpo $k$ de determinante $1$.
 
-* El subrgupo de Klein $\\{(), (1\\;2)(3\\;4), (1\\;3)(2\\;4), (1\\;4)(2\\;3)\\}\subset S_4$.
+* El subgrupo de Klein $\\{(), (1\\;2)(3\\;4), (1\\;3)(2\\;4), (1\\;4)(2\\;3)\\}\subset S_4$.
 
 {{% /example %}}
 
@@ -928,7 +928,7 @@ y $x^r\in \\{e,x,\dots, x^{n-1}\\}$. Esto termina la demostración.
 {{% example name="¿Es $S_n$ cíclico?" %}}
 Tenemos que $S_2=\langle (1\\; 2)\rangle$, pero $S_n$ no es cíclico para ningún otro $n>2$. Veámoslo. Todo elemento $\sigma\in S_n$ se puede descomponer como producto de $c$ ciclos disjuntos de longitud $l_1,\dots, l_c$. El número de elementos del soporte de $\sigma$ es $l_1+\cdots+l_c\leq n$. Es fácil pero tedioso ver que
 
-$$o(\sigma)=\operatorname{mcd}(l_1,\dots, l_c)\leq l_1\cdots l_c < n!$$
+$$o(\sigma)=\operatorname{lcm}(l_1,\dots, l_c)\leq l_1\cdots l_c < n!$$
 
 excepto si $n=2$, $c=1$ y $l_1=2$. Por tanto $|\langle\sigma\rangle|=o(\sigma) < n!=|S_n|$, así que la inclusión $\langle\sigma\rangle\subset S_n$ ha de ser siempre estricta si $n>2$.
 {{% /example %}}
@@ -1077,7 +1077,7 @@ Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una 
 
 5. Dado un grupo $G$ y un elemento $x\in G$, la **conjugación** por $x$, $c_x\colon G\rightarrow G$, $c_x(y)=x^{-1}yx$.
 
-6. Dado un grupo $G$ y un elemento $x\in G$, la aplicación $f_x\colon \mathbb{Z}\rightarrow G$ definida como $f_x(n)=x^n$ es un homomorfismo.
+6. Dado un grupo $G$ y un elemento $x\in G$, la aplicación $f_x\colon \mathbb{Z}\rightarrow G$ definida como $f_x(n)=x^n$.
 
 7. Dado $n\in\mathbb Z$, la **multiplicación** por $n$, es decir, la aplicación $f\colon \mathbb Z\to\mathbb Z$ definida como $f(x)=n x$.
 
@@ -1156,7 +1156,7 @@ es un homomorfismo biyectivo.
 {{% /definition %}}
 
 De los homomorfismos del [ejemplo](#homomorphisms) anterior,
-son isomorfismos los siguientes: 1, 3 para $n=2$, 4 para $n=1$, 5 ya que $c\_x$ tiene inverso $c\_{x^{-1}}$, 7 y 8 si $n=\pm1$, y 9. Además, 2 es un monomorfismo, y 3 y 4 son epimorfismos para todo $n\geq 1$.
+son isomorfismos los siguientes: 1, 3 para $n=2$, 4 para $n=1$, 5 ya que $c\_x$ tiene inverso $c\_{x^{-1}}$, 7 y 8 si $n=\pm1$, y 9. Además, 2 es un monomorfismo, 3 es epimorfismo para todo $n\geq 2$ y 4 es epimorfismo para todo $n\geq 1$.
 
 
 {{% proposition %}}
@@ -1248,7 +1248,7 @@ Un grupo $G$ es cíclico infinito si y solo si es isomorfo a $\mathbb{Z}$.
 {{% proof %}}
 $\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$. Como el orden de $x$ es infinito, todas las potencias de $x$ son distintas según hemos visto [antes](#different), luego $f_x$ es inyectivo, así que $f_x$ es el isomorfismo que andábamos buscando.
 
-$\Leftarrow$ Esta implicaición es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
+$\Leftarrow$ Esta implicación es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
 {{% /proof %}}
 
 {{% proposition %}}
@@ -1349,7 +1349,7 @@ Esta proposición demuestra que para probar que un homomorfismo $f\colon G\right
 ## Grupos cociente
 
 {{% definition %}}
-Dado un grupo $G$, un subgrupo $K\subset G$ es **normal** $g^{-1}kg\in K$ para todo $g\in G$ y $k\in K$.
+Dado un grupo $G$, un subgrupo $K\subset G$ es **normal** si $g^{-1}kg\in K$ para todo $g\in G$ y $k\in K$.
 {{% /definition %}}
 
 {{% watch %}}
@@ -1444,7 +1444,7 @@ $$
 \end{array}
 $$
 
-está bien definida. Observa que la imagen de un par podría depender de la elección de representantes de las clases a izquierda. Veamos que esto no ocurre. Para ello, dados $x,y\in G$ cualesquiera, debemos comprobar que si $xK=\bar{x}K$ e $yK=\bar{y}K$ entonces $(xy)K=(\bar{x}y)=(x\bar{y})K$, ya que de aquí se deduce que $(xy)K=(\bar{x}\bar{y})K$.
+está bien definida. Observa que la imagen de un par podría depender de la elección de representantes de las clases a izquierda. Veamos que esto no ocurre. Para ello, dados $x,y\in G$ cualesquiera, debemos comprobar que si $xK=\bar{x}K$ e $yK=\bar{y}K$ entonces $(xy)K=(\bar{x}y)K=(x\bar{y})K$, ya que de aquí se deduce que $(xy)K=(\bar{x}\bar{y})K$.
 
 Por un lado, si $yK=\bar{y}K$ entonces $y\sim_K \bar{y}$, es decir $y^{-1}\bar{y}\in K$,
 por tanto
@@ -1472,7 +1472,7 @@ Con respecto al núcleo, basta observar que, dado $x\in G$, $\pi(x)=x K=e K$ si 
 {{% /proof %}}
 
 {{% remark %}}
-El grupo cociente $G/K$ se denomina $G$ **módulo** $K$ y las clase $xK$ también se llama $x$ módulo $K$. El teorema anterior demuestra que $xK$ es el elemento neutro de $G/K$ si y solo si $x\in K$. También prueba que todo subgrupo normal es el núcleo del algún homomorfismo.
+El grupo cociente $G/K$ se denomina $G$ **módulo** $K$ y la clase $xK$ también se llama $x$ módulo $K$. El teorema anterior demuestra que $xK$ es el elemento neutro de $G/K$ si y solo si $x\in K$. También prueba que todo subgrupo normal es el núcleo del algún homomorfismo.
 {{% /remark %}}
 
 {{% corollary %}}
@@ -1485,7 +1485,7 @@ Hemos identificado entonces subgrupos normales con núcleos de homomorfismos. No
 Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de la inclusión $i\colon H\hookrightarrow G$ es $\operatorname{im}\\; i=H$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
 {{% /watch %}}
 
-Veamos ahora una vesión del teorema de factorización de aplicaciones para grupos y homomorfismos.
+Veamos ahora una versión del teorema de factorización de aplicaciones para grupos y homomorfismos.
 
 {{% theorem name="Primer teorema de isomorfía" label="groupsisomorph" %}}
 Dado un homomorfismo de grupos $f\colon G\to H$, existe un único homomorfismo $\overline{f}\colon G/\operatorname{ker} f\rightarrow \operatorname{im} f$ tal que el siguiente diagrama es conmutativo
@@ -1496,7 +1496,7 @@ es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónic
 {{% /theorem %}}
 
 {{% proof %}}
-La factorización es la del homomorfismo $f$ visto solo como apicación. Basta ver que la relación de equivalencia en $G$ definida por la aplicación $f$ es la misma que la que define el subgrupo $\operatorname{ker} f$. Por comodidad, llamaremos $K=\operatorname{ker} f$. Dados $x,y\in G$, $x\sim_K y$ $\Leftrightarrow$ $x^{-1}y\in K$ $\Leftrightarrow$ $f(x^{-1}y)=e$. Como $f(x^{-1}y)=f(x)^{-1}f(y)$ esto es el elemento neutro si y solo si $f(x)= f(y)$, lo que equivale a $x\sim_f y$. Habría que comprobar también que $\overline{f}$ es un homomorfismo. Esto es cierto porque, recordemos, esta aplicación se define como $f$ sobre los representantes, es decir, $\overline{f}(xK)=f(x)$ y $f$ es un homomorfismo, así que
+La factorización es la del homomorfismo $f$ visto solo como aplicación. Basta ver que la relación de equivalencia en $G$ definida por la aplicación $f$ es la misma que la que define el subgrupo $\operatorname{ker} f$. Por comodidad, llamaremos $K=\operatorname{ker} f$. Dados $x,y\in G$, $x\sim_K y$ $\Leftrightarrow$ $x^{-1}y\in K$ $\Leftrightarrow$ $f(x^{-1}y)=e$. Como $f(x^{-1}y)=f(x)^{-1}f(y)$ esto es el elemento neutro si y solo si $f(x)= f(y)$, lo que equivale a $x\sim_f y$. Habría que comprobar también que $\overline{f}$ es un homomorfismo. Esto es cierto porque, recordemos, esta aplicación se define como $f$ sobre los representantes, es decir, $\overline{f}(xK)=f(x)$ y $f$ es un homomorfismo, así que
 $$
 \begin{array}{rcl}
 \overline{f}((xK)(yK))&=&\overline{f}((xy)K)\cr
@@ -1519,7 +1519,7 @@ El homomorfismo $\operatorname{signo}\colon S_n\rightarrow\\{\pm1\\}$ es sobreye
 $$
 \begin{array}{rcl}
 2&=&|\\{\pm1\\}|\cr
-&=&[S_n:G_n]\cr
+&=&[S_n:A_n]\cr
 &=&\frac{|S_n|}{|A_n|}\cr
 &=&\frac{n!}{|A_n|}.
 \end{array}
@@ -1534,7 +1534,7 @@ Un grupo $G$ es cíclico de orden $n$ si y solo si es isomorfo a $\mathbb{Z}/\la
 {{% proof %}}
 $\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$, así que $\operatorname{im} f_x=G$. Como el orden de $x$ coincide con el de $G$, que es $n$, sabemos que $m\in\operatorname{ker} f_x$ $\Leftrightarrow$ $f_x(m)=x^m=e$ $\Leftrightarrow$ $n|m$ $\Leftrightarrow$ $m\in\langle n\rangle$, así que $\operatorname{ker} f_x=\langle n\rangle$. Por tanto el primer teorema de isomorfía nos da el isomorfismo deseado $\overline{f_x}\colon \mathbb{Z}/\langle n\rangle\cong G$.
 
-$\Leftarrow$ Esta implicaición es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
+$\Leftarrow$ Esta implicación es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
 {{% /proof %}}
 
 
