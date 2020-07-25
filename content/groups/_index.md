@@ -928,7 +928,7 @@ y $x^r\in \\{e,x,\dots, x^{n-1}\\}$. Esto termina la demostración.
 {{% example name="¿Es $S_n$ cíclico?" %}}
 Tenemos que $S_2=\langle (1\\; 2)\rangle$, pero $S_n$ no es cíclico para ningún otro $n>2$. Veámoslo. Todo elemento $\sigma\in S_n$ se puede descomponer como producto de $c$ ciclos disjuntos de longitud $l_1,\dots, l_c$. El número de elementos del soporte de $\sigma$ es $l_1+\cdots+l_c\leq n$. Es fácil pero tedioso ver que
 
-$$o(\sigma)=\operatorname{lcm}(l_1,\dots, l_c)\leq l_1\cdots l_c < n!$$
+$$o(\sigma)=\operatorname{mcm}(l_1,\dots, l_c)\leq l_1\cdots l_c < n!$$
 
 excepto si $n=2$, $c=1$ y $l_1=2$. Por tanto $|\langle\sigma\rangle|=o(\sigma) < n!=|S_n|$, así que la inclusión $\langle\sigma\rangle\subset S_n$ ha de ser siempre estricta si $n>2$.
 {{% /example %}}
