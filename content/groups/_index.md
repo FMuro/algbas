@@ -226,9 +226,9 @@ Un elemento de un grupo $x\in G$ tiene orden infinito si y solo si todas sus pot
 {{% proof %}}
 En lugar de demostrar $A\Leftrightarrow B$ probaremos NO $A$ $\Leftrightarrow$ NO $B$.
 
-Si $x$ es de orden $n>0$ entonces $x^n=e=x^0$.
+$\Rightarrow$ Si $x$ es de orden $n>0$ entonces $x^n=e=x^0$.
 
-Si $x$ tiene dos potencias iguales, digamos $x^r=x^s$ con $r>s$, entonces
+$\Leftarrow$ Si $x$ tiene dos potencias iguales, digamos $x^r=x^s$ con $r>s$, entonces
 $$
 \begin{array}{rcl}
 x^{r-s}&=&x^r\star x^{-s}\cr
