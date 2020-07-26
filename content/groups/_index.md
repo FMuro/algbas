@@ -24,7 +24,7 @@ que ha de satisfacer las propiedades siguentes:
 
 {{% /definition %}}
 
-Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$. En este caso también es frecuente sustituir el símbolo $\star$ por una mera yuxtaposición de símbolos, es decir $x\star y=xy$. Observa que $e^{-1}=e$.
+Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$. En este caso también es frecuente sustituir el símbolo $\star$ por una mera yuxtaposición de símbolos, es decir $x\star y=xy$. 
 
 {{% example name="Ejemplos de grupos" %}}
 Los siguientes son algunos grupos bien conocidos:
@@ -85,7 +85,7 @@ $$
  
 {{% /proof %}}
 
-Gracias al resultado anterior, podemos denotar  $x^{-1}$ al simétrico de $x$ sin ambigüedad, o $-x$ si estamos usando notación aditiva. Cuando estudiamos los conjuntos demostramos un resultado análogo para aplicaciones biyectivas.
+Gracias al resultado anterior, podemos denotar  $x^{-1}$ al simétrico de $x$ sin ambigüedad, o $-x$ si estamos usando notación aditiva. Cuando estudiamos los conjuntos demostramos un resultado análogo para aplicaciones biyectivas. Observa que $e^{-1}=e$.
 
 {{% proposition %}}
 Si $x,y\in G$ son elementos de un grupo tales que $x\star y=e$, entonces $y=x^{-1}$ y $x=y^{-1}$.
