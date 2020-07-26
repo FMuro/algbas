@@ -210,7 +210,7 @@ $$
 {{% /example %}}
 
 {{% remark %}}
-Cuando el grupo es está expresado con la notación aditiva, la notación exponencial se cambia por una multiplicativa, es decir,
+Cuando el grupo está expresado con la notación aditiva, la notación exponencial se cambia por una multiplicativa, es decir,
 
 $$n\cdot x=x+\stackrel{n}{\cdots}+ x,\quad n>0.$$
 
