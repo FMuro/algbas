@@ -178,7 +178,7 @@ Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las po
 
 
 {{% definition %}}
-Diremos que un elemento de un grupo $x\in G$ tiene **orden finito** si existe un entero positivo $n>0$ tal que $x^n=e$. En este caso, el **orden** de $x$, que denotaremos $o(x)$, es el menor entero positivo que cumple esta propiedad.
+Diremos que un elemento de un grupo $x\in G$ tiene **orden finito** si existe un entero positivo $n>0$ tal que $x^n=e$. En este caso, el **orden** de $x$, que denotaremos $o(x)$, es el menor entero positivo que cumple esta propiedad. Si $x\in G$ no tiene orden finito, diremos que tiene **orden infinito**.
 {{% /definition %}}
 
 {{% example name="Elementos de orden finito" %}}
