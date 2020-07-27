@@ -1,14 +1,38 @@
-\documentclass[]{amsart}
+% !TEX program = 
+% The above is so as not to compile on save in vscode
+\documentclass[12pt]{book}
+
+% Promote sections one step up
+
+\let\subparagraph\paragraph 
+\let\paragraph\subsubsection
+\let\subsubsection\subsection
+\let\subsection\section
+\let\section\chapter
 
 \usepackage[draft]{hyperref} % remove all hyperlinks included in the translation
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage%[demo]
-{graphicx}
+\usepackage{amsthm}
+\usepackage{graphicx} % graphics support
 \usepackage[spanish]{babel}
-\usepackage{letltxmacro}
+\usepackage{letltxmacro} % rename macros
 \usepackage{float}
 \floatplacement{figure}{H} % do not float images
+
+% Times-new-roman-like fonts
+
+\usepackage{fontspec} 
+\setromanfont{TeX Gyre Termes} 
+\usepackage[math-style=TeX]{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\setmathfont[range=\setminus]{Asana Math}
+
+% Use colored boxes
+
+\usepackage{tcolorbox} 
+\tcbuselibrary{most}
+
 % ----------------------------------------------------------------
 \vfuzz2pt % Don't report over-full v-boxes if over-edge is small
 \hfuzz2pt % Don't report over-full h-boxes if over-edge is small
@@ -25,7 +49,51 @@
 \newtheorem{exercise}[equation]{Ejercicio}
 \newtheorem{watch}[equation]{Advertencia}
 
-\numberwithin{equation}{subsection}
+% Custom colors
+
+\definecolor{lightgreen}{rgb}{0,.8,0}
+\definecolor{whitegreen}{rgb}{.6,1,.6}
+\definecolor{lightblue}{rgb}{0,0,.8}
+\definecolor{whiteblue}{rgb}{.8,.8,1.}
+\definecolor{canela}{rgb}{.55,.29,.15}
+\definecolor{barbecho}{rgb}{.76,.6,.42}
+
+% Define colored boxes
+
+\tcolorboxenvironment{theorem}{
+enhanced jigsaw,
+colframe=lightgreen,
+interior style={top color=white, bottom color=whitegreen},
+boxrule=2mm,
+breakable,
+before skip=10pt,
+after skip=10pt, 
+drop fuzzy shadow}
+
+\tcolorboxenvironment{definition}{
+enhanced jigsaw,
+colframe=lightblue,
+interior style={top color=white, bottom color=whiteblue},
+boxrule=2mm,
+breakable,
+before skip=10pt,
+after skip=10pt, 
+drop fuzzy shadow}
+
+\tcolorboxenvironment{remark}{
+enhanced jigsaw,
+colframe=canela,
+interior style={top color=white, bottom color=barbecho},
+boxrule=2mm,
+breakable,
+before skip=10pt,
+after skip=10pt, 
+drop fuzzy shadow}
+
+% Numbering: chapter.section.number
+
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\numberwithin{equation}{section}
 
 \providecommand{\tightlist}{%
 	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -40,12 +108,20 @@
 \LetLtxMacro{\OldIncludegraphics}{\includegraphics} 
 \renewcommand{\includegraphics}[1]{\OldIncludegraphics[width=0.5\textwidth]{#1}}
 
+% Watermark
+
+\usepackage{eso-pic}
+
+\AddToShipoutPictureBG{\put(\LenToUnit{185mm},\LenToUnit{0mm}){\OldIncludegraphics[angle=90,height=\pageheight]{us-texto.pdf}}}
+\AddToShipoutPictureBG{\put(\LenToUnit{10mm},\LenToUnit{0mm}){\OldIncludegraphics[width=174mm]{us-fama.pdf}}}
+
+% User-defined commands
+
 \def\im{\operatorname{im}}
 \def\Imag{\im}
 \newcommand{\inv}[1]{{#1}^{-1}}
 \newcommand{\id}[1]{\operatorname{id}_{#1}}
 \newcommand{\perm}[1]{S_{#1}}
-
 \def\R{\mathbb{R}}
 \def\Q{\mathbb{Q}}
 \def\C{\mathbb{C}}
@@ -67,22 +143,10 @@
 \def\To{\longrightarrow}
 
 %opening
-\title{Álgebra básica}
-\author{Fernando Muro}
-\address{Universidad de Sevilla,
-	Facultad de Matem\'aticas,
-	Departamento de \'Algebra,
-	Avda. Reina Mercedes s/n,
-	41012 Sevilla, Spain}
-\email{fmuro@us.es}
-\urladdr{http://personal.us.es/fmuro}
-
+\title{Álgebra Básica}
+\author{Equipo docente de la asignatura}
 
 \begin{document}
-
-\begin{abstract}
-Notas de la asignatura Álgebra Básica del Grado en Matemáticas de la Universidad de Sevilla. Esta versión en PDF se ha generado automáticamente a partir de la página web \url{http://asignatura.us.es/algbas/} y puede contener errores derivados del proceso de conversion. Les agradecería que informasen de cualquier error que encuentren escribiendo a \texttt{fmuro@us.es}.
-\end{abstract}
 
 \maketitle
 
