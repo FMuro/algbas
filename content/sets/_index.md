@@ -797,7 +797,7 @@ El conjunto exponencial $\\{a,b\\}^{\\{1,2\\}}=\\{f\_1,f\_2,f\_3,f\_4\\}$ está 
 {{% definition %}}
 El **grafo** de una aplicación $f\colon A\rightarrow B$ es el conjunto 
 
-$$G_f=\\{(a,b)\in A\times b | b=f(a) \\} \subset A\times B$$
+$$G_f=\\{(a,b)\in A\times B | b=f(a) \\} \subset A\times B$$
 
 {{% /definition %}}
 
@@ -818,13 +818,13 @@ Las aplicaciones $f\colon A\rightarrow B$ se caracterizan porque para cada $a$ e
 ## Conjuntos cociente
 
 {{% definition %}}
-Una **relación** $R$ en un conjunto $A$ es un subconjunto $R\subset A\times A$. Si $(a,b)\in R$ diremos que a **está relacionado con** $b$ y lo denotaremos $aRb$, o simplemente $a\sim b$ cuando la relación $R$ sea obvia por el contexto.
+Una **relación** $R$ en un conjunto $A$ es un subconjunto $R\subset A\times A$. Si $(x,y)\in R$ diremos que $x$ **está relacionado con** $y$ y lo denotaremos $xRy$, o simplemente $x\sim y$ cuando la relación $R$ sea obvia por el contexto.
 
 Una relación $R$ es **de equivalencia** si satisface las siguientes propiedades:
 
-* $aRa$ para todo $a \in A$ (**reflexiva**).
-* $aRb\Leftrightarrow bRa$ para $a,b\in A$ cualesquiera (**simétrica**).
-* $aRb\wedge bRc\Rightarrow aRc$ para $a,b,c\in A$ (**transitiva**).
+* $xRx$ para todo $x \in A$ (**reflexiva**).
+* $xRy\Leftrightarrow yRx$ para $x,y\in A$ cualesquiera (**simétrica**).
+* $xRy\wedge yRz\Rightarrow xRz$ para $x,y,z\in A$ (**transitiva**).
 
 {{% /definition %}}
 
@@ -861,15 +861,15 @@ Pon más ejemplos, definidos sobre los conjuntos que desees, de relaciones que s
 {{% /exercise %}}
 
 {{% definition %}}
-Dada una relación de equivalencia $R$ en un conjunto $A$, la **clase (de equivalencia)** de $a \in A$ es el conjunto de los elementos relacionados con $a$, es decir $R(a)=\\{b\in A| aRb\\}$. Los elementos de $R(a)$ se denominan **representantes** de esta clase. El conjunto **cociente** de $A$ por $R$ es el formado por las clases de equivalencia de los elementos de $A$. La **proyección canónica** es la aplicación sobreyectiva $\pi\colon A \twoheadrightarrow A/R$ definida como $a\mapsto R(a)$.
+Dada una relación de equivalencia $R$ en un conjunto $A$, la **clase (de equivalencia)** de $x \in A$ es el conjunto de los elementos relacionados con $x$, es decir $R(x)=\\{y\in A| xRy\\}$. Los elementos de $R(x)$ se denominan **representantes** de esta clase. El conjunto **cociente** de $A$ por $R$ es el formado por las clases de equivalencia de los elementos de $A$. La **proyección canónica** es la aplicación sobreyectiva $\pi\colon A \twoheadrightarrow A/R$ definida como $x\mapsto R(x)$.
 {{% /definition %}}
 
 {{% remark %}}
-Cuando la relación de equivalencia se denota simplemente $\sim$ por ser sobreentendida, la clase de un elemento $a\in A$ se denota simplemente como $[a]$ o $\bar{a}$. Observa que, en virtud de la reflexividad, $a\in R(a)$ en cualquier relación de equivalencia.
+Cuando la relación de equivalencia se denota simplemente $\sim$ por ser sobreentendida, la clase de un elemento $x\in A$ se denota simplemente como $[x]$ o $\overline{x}$. Observa que, en virtud de la reflexividad, $x\in R(x)$ en cualquier relación de equivalencia.
 {{% /remark %}}
 
 {{% watch %}}
-En las relaciones de equivalencia, y por tanto en los cocientes, el problema que más confusión genera es que una misma clase de equivalencia puede tener muchos representantes diferentes. Esto dificulta la definición de aplicaciones que parten de cocientes $f\colon A/R\rightarrow B$, ya que si quiero definir $f(R(a))$ basándome en la elección de un representante, por ejemplo $a\in R(a)$, debo comprobar que la definición es independiente de cualquier otra elección posible del representante $b\in R(a)$.
+En las relaciones de equivalencia, y por tanto en los cocientes, el problema que más confusión genera es que una misma clase de equivalencia puede tener muchos representantes diferentes. Esto dificulta la definición de aplicaciones que parten de cocientes $f\colon A/R\rightarrow B$, ya que si quiero definir $f(R(x))$ basándome en la elección de un representante, por ejemplo $x\in R(x)$, debo comprobar que la definición es independiente de cualquier otra elección posible del representante $y\in R(x)$.
 {{% /watch %}}
 
 {{% example name="Conjuntos cociente" %}}
@@ -905,13 +905,13 @@ La siguiente es una partición de un conjunto $A$ formada por los subconjuntos $
 
 
 {{% proposition %}}
-Si $R$ una relación de equivalencia en un conjunto $A$, $aR b\Leftrightarrow R(a)=R(b)$.
+Si $R$ es una relación de equivalencia en un conjunto $A$, $xRy\Leftrightarrow R(x)=R(y)$.
 {{% /proposition %}}
 
 {{% proof %}}
-$\Leftarrow$ En este caso $aRb$ pues $a\in R(b)$.
+$\Leftarrow$ En este caso $xRy$ pues $y\in R(x)$.
 
-$\Rightarrow$ Probemos $\subset$. Si $c\in R(a)$ es porque $cR a$. Como $aRb$, por la transitividad tenemos que $cR b$, así que $c\in R(b)$. La inclusión $\supset$ también es cierta porque, por la simetría, los papeles de $a$ y $b$ son intercambiables en el argumento anterior.
+$\Rightarrow$ Probemos $\subset$. Si $z\in R(x)$ es porque $xRz$. Como $yRx$, por la transitividad tenemos que $yRz$, así que $z\in R(y)$. La inclusión $\supset$ también es cierta porque, por la simetría, los papeles de $x$ e $y$ son intercambiables en el argumento anterior.
 {{% /proof %}}
 
 {{% theorem %}}
@@ -919,9 +919,9 @@ Si $R$ es una relación de equivalencia en $A$, entonces $A/R$ es una partición
 {{% /theorem %}}
 
 {{% proof %}}
-Las clases que forman $A/R$ no son vacías porque todas poseen algún representante. La unión de todas las clases es $A$, porque todo $a\in A$ pertenece a una clase, a la suya propia, $a\in R(a)$. Supongamos que dos clases $R(a)$ y $R(b)$ no fueran disjuntas. Entonces existe $c\in R(a)\cap R(b)$. Esto significa que $cRa$ y $cRb$. Por la simetría y la transitividad, $aRb$, luego por la proposición anterior $R(a)=R(b)$.
+Las clases que forman $A/R$ no son vacías porque todas poseen algún representante. La unión de todas las clases es $A$, porque todo $x\in A$ pertenece a una clase, a la suya propia, $x\in R(x)$. Supongamos que dos clases $R(x)$ y $R(y)$ no fueran disjuntas. Entonces existe $z\in R(x)\cap R(y)$. Esto significa que $xRz$ e $yRz$. Por la simetría y la transitividad, $xRy$, luego por la proposición anterior $R(x)=R(y)$.
 
-Si tenemos una partición $P$ de $A$, podemos definir la relación de equivalencia $a\sim_Pb$ si $a$ y $b$ pertenecen al mismo elemento de la partición. Es obvio que esta relación es simétrica. Es reflexiva porque, en virtud de la segunda propiedad de las particiones, todo elemento de $A$ pertenece a alguno de $P$. Veamos la transitividad. Si $a\sim_Pb\sim_Pc$ entonces existen $U,V\in P$ tales que $a,b\in U$ y $b,c\in V$. Como $b\in U\cap V$ la tercera propiedad de las particiones nos asegura que $U=V$, así que $a\sim_Pc$. Esta relación de equivalencia satisface $A/\sim_P=P$ por su propia definición, ya que el vacío no está en $P$.
+Si tenemos una partición $P$ de $A$, podemos definir la relación de equivalencia $x\sim_Py$ si $x$ e $y$ pertenecen al mismo elemento de la partición. Es obvio que esta relación es simétrica. Es reflexiva porque, en virtud de la segunda propiedad de las particiones, todo elemento de $A$ pertenece a alguno de $P$. Veamos la transitividad. Si $x\sim_Py\sim_Pz$ entonces existen $U,V\in P$ tales que $x,y\in U$ y $y,z\in V$. Como $y\in U\cap V$ la tercera propiedad de las particiones nos asegura que $U=V$, así que $x\sim_Pz$. Esta relación de equivalencia satisface $A/\sim_P=P$ por su propia definición, ya que el vacío no está en $P$.
 {{% /proof %}}
 
 
@@ -929,7 +929,7 @@ Si tenemos una partición $P$ de $A$, podemos definir la relación de equivalenc
 
 {{% theorem name="Propiedad universal de la proyección canónica" %}}
 Si $f\colon A\rightarrow B$ es una aplicación y $R$ es una relación de equivalencia en $A$ tal que
-$ a R b \Rightarrow f(a) =f(b)$, entonces
+$xRy \Rightarrow f(x) =f(y)$, entonces
 existe una única aplicación $\overline{f}\colon A/R\to B$ tal que $f=\overline{f}\circ\pi$,
 
 $$f\colon A\stackrel{\pi}\longrightarrow A/R\stackrel{\overline{f}}\longrightarrow B.$$
@@ -942,16 +942,16 @@ Vamos a suponer que $\overline{f}$ existe y cumple las propiedades indicadas. De
 Si $f=\overline{f}\circ\pi$ entonces dado $a\in A$,
 $$
 \begin{array}{rcl}
-f(a)&=&(\overline{f}\circ\pi)(a)\cr
-&=&\overline{f}(\pi(a))\cr
-&=&\overline{f}(R(a)).
+f(x)&=&(\overline{f}\circ\pi)(x)\cr
+&=&\overline{f}(\pi(x))\cr
+&=&\overline{f}(R(x)).
 \end{array}
 $$
-Definimos pues $\overline{f}$ mediante la fórmula $\overline{f}(R(a))=f(a)$. Veamos que $\overline{f}$ está bien definida así. Para ello hemos de comprobar que si $R(a)=R(b)$ entonces $f(a)=f(b)$. Esto se deduce de la hipótesis ya que $R(a)=R(b)$ si y solo si $aRb$.
+Definimos pues $\overline{f}$ mediante la fórmula $\overline{f}(R(x))=f(x)$. Veamos que $\overline{f}$ está bien definida así. Para ello hemos de comprobar que si $R(x)=R(y)$ entonces $f(x)=f(y)$. Esto se deduce de la hipótesis ya que $R(x)=R(y)$ si y solo si $xRy$.
 {{% /proof %}}
 
 {{% definition %}}
-Dada una aplicación $f\colon A\to B$, podemos definir relación de equivalencia $\sim_f$ en $A$ asociada a $f$ como $a\sim_fb$ si $f(a)=f(b)$.
+Dada una aplicación $f\colon A\to B$, podemos definir relación de equivalencia $\sim_f$ en $A$ asociada a $f$ como $x\sim_f y$ si $f(x)=f(y)$.
 {{% /definition %}}
 
 {{% exercise %}}
@@ -970,19 +970,19 @@ es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónic
 {{% /theorem %}}
 
 {{% proof %}}
-Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\operatorname{im} f$ como $f'(a)=f(a)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(a)=i(f(a))=f(a)$ para todo $a\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$.
+Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\operatorname{im} f$ como $f'(x)=f(x)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(x)=i(f(x))=f(x)$ para todo $x\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$.
 
-El teorema anterior se puede aplicar a $f'\colon A\rightarrow\operatorname{im} f$ y a $\sim\_{f}$. Esto da lugar a una aplicación $\overline{f}\colon A/\sim\_f\rightarrow \operatorname{im} f$ que satisface $f'=\overline{f}\circ\pi$, así que $f=i\circ f'=i\circ(\overline{f}\circ\pi)$. La aplicación $\overline{f}$ es la única que se descompone de este modo, ya que la propia descomposición fuerza una fórmula para su definición. En efecto, dado $a\in A$,
+El teorema anterior se puede aplicar a $f'\colon A\rightarrow\operatorname{im} f$ y a $\sim\_{f}$. Esto da lugar a una aplicación $\overline{f}\colon A/\sim\_f\rightarrow \operatorname{im} f$ que satisface $f'=\overline{f}\circ\pi$, así que $f=i\circ f'=i\circ(\overline{f}\circ\pi)$. La aplicación $\overline{f}$ es la única que se descompone de este modo, ya que la propia descomposición fuerza una fórmula para su definición. En efecto, dado $x\in A$,
 $$
 \begin{array}{rcl}
-f(a)&=&(i\circ\overline{f}\circ\pi)(a)\cr
-&=&i(\overline{f}(\pi(a)))\cr
-&=&i(\overline{f}([a]))\cr
-&=&\overline{f}([a]).
+f(x)&=&(i\circ\overline{f}\circ\pi)(x)\cr
+&=&i(\overline{f}(\pi(x)))\cr
+&=&i(\overline{f}([x]))\cr
+&=&\overline{f}([x]).
 \end{array}
 $$
 
-Veamos que $\overline{f}$ es biyectiva. Comenzamos por la sobreyectividad. Dado $b\in\operatorname{im} f$, como $f'$ es sobreyectiva, existe $a\in A$ tal que $b=f(a)=\overline{f}([a])$. Esto prueba que $\overline{f}$ es sobreyectiva. Comprobemos ahora la inyectividad. Dados $[a],[b]\in A/\sim\_f$, usando la anterior fórmula para $\overline{f}$ vemos que $\overline{f}([a])=\overline{f}([b])$ si y solo si $f(a)=f(b)$, lo cual equivale a que $a\sim\_fb$, que es lo mismo que decir $[a]=[b]$. Esto concluye la prueba.
+Veamos que $\overline{f}$ es biyectiva. Comenzamos por la sobreyectividad. Dado $b\in\operatorname{im} f$, como $f'$ es sobreyectiva, existe $a\in A$ tal que $b=f(a)=\overline{f}([a])$. Esto prueba que $\overline{f}$ es sobreyectiva. Comprobemos ahora la inyectividad. Dados $[x],[y]\in A/\sim\_f$, usando la anterior fórmula para $\overline{f}$ vemos que $\overline{f}([x])=\overline{f}([y])$ si y solo si $f(x)=f(y)$, lo cual equivale a que $x\sim\_f y$, que es lo mismo que decir $[x]=[y]$. Esto concluye la prueba.
 {{% /proof %}}
 
 Este teorema nos proporciona un método muy eficiente para establecen una biyección de un conjunto cociente en otro.
