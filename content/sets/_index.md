@@ -89,7 +89,7 @@ También se puede denotar $A\subset B$ como $A\subseteq B$. Hay que tener cuidad
 La contención es **transitiva**, $A\subset B\subset C\Rightarrow A\subset C$. También es **reflexiva**, $A\subset A$. Además, el vacío está contenido en cualquier conjunto $\varnothing\subset A$. Los subconjuntos de $A$ distintos de $\varnothing$ y  $A$ se denominan **subconjuntos propios** de $A$.
 {{% /remark %}}
 
-![La contención es transitiva](../images/inclusion_transitive.png)
+![La contención es transitiva](../images/inclusion_transitive.svg)
 
 El siguiente resultado caracteriza la igualdad entre dos conjuntos en términos de contenciones. Es la base de una técnica de prueba conocida como **doble inclusión**, que aplicaremos con frecuencia.
 
@@ -117,7 +117,7 @@ Dados dos conjuntos $A$ y $B$ la **intersección** $A \cap B$ es el conjunto for
 que pertenecen a ambos conjuntos, $A \cap B = \\{ x  |  x \in A  \wedge  x  \in B \\}$.
 {{% /definition %}}
 
-![Intersección](../images/intersection.png)
+![Intersección](../images/intersection.svg)
 
 {{% remark %}}
 Si $C\subset A$ y $C\subset B$ entonces $C\subset A\cap B$.
@@ -173,14 +173,14 @@ $\bigcap_{n\in\mathbb{N}}[0,\frac{1}{2^n})=\\{0\\}$. En efecto, la inclusión $\
 Dos conjuntos $A$ y $B$ son **disjuntos** si $A \cap B = \varnothing$.
 {{% /definition %}}
 
-![Disjuntos](../images/disjoint.png)
+![Disjuntos](../images/disjoint.svg)
 
 {{% definition %}}
 Dados dos conjuntos $A$ y $B$ la **unión** $A \cup B$ es el conjunto formado por aquellos elementos
 que pertenecen al menos a uno de estos dos conjuntos, $A \cup B = \\{ x  |  x \in A  \vee  x  \in B \\}$.
 {{% /definition %}}
 
-![Unión](../images/union.png)
+![Unión](../images/union.svg)
 
 Observa que $A\cap B\subset A\cup B$.
 
@@ -236,7 +236,7 @@ $\bigcup_{n\in\mathbb{N}}[0,\frac{1}{2^n})=[0,\frac{1}{2})$ ya que $[0,\frac{1}{
 Dados dos conjuntos $A$ y $B$ se define la **diferencia** $A \setminus B$, como el conjunto formado por los elementos de $A$ que no están en $B$, $A \setminus B = \\{ x  |  x \in A  \wedge  x \notin B \\}$.
 {{% /definition %}}
 
-![Diferencia](../images/difference.png)
+![Diferencia](../images/difference.svg)
 
 {{% watch %}}
 Observa que $A\setminus B\neq B\setminus A$. De hecho ambos conjuntos son disjuntos.
@@ -247,7 +247,7 @@ Observa que $A\setminus B\neq B\setminus A$. De hecho ambos conjuntos son disjun
 La **diferencia simétrica** $A\triangle B$ de dos conjuntos $A$ y $B$ se define como $A\triangle B=(A\setminus B)\cup(B\setminus A)=(A\cup B)\setminus (A\cap B)$.
 {{% /definition %}}
 
-![Diferencia simétrica](../images/symmetric_difference.png)
+![Diferencia simétrica](../images/symmetric_difference.svg)
 
 
 {{% theorem name="Leyes distributivas" %}}
@@ -268,7 +268,7 @@ Veamos ahora $\subset$. Dado $x\in A\cap (B\cup C)$ tenemos que $x\in A$ y $x\in
 
 Los siguientes diagramas ilustran las leyes distributivas.
 
-![Leyes distributivas](../images/distributive_laws.png)
+![Leyes distributivas](../images/distributive_laws.svg)
 
 {{% theorem name="Leyes de De Morgan" %}}
 Dados tres conjuntos $A$, $B$ y $C$:
@@ -288,7 +288,7 @@ Para probar $\subset$, tomamos $x\in C \setminus (A \cap B)$. Esto quiere decir 
 
 Las leyes de De Morgan quedan mejor explicadas por los siguientes diagramas.
 
-![Leyes de De Morgan](../images/morgan.png)
+![Leyes de De Morgan](../images/morgan.svg)
 
 {{% definition %}}
 El **producto cartesiano** de dos conjuntos $A$ y $B$ es el conjunto $A\times B$ cuyos elementos son los **pares ordenados** $(a,b)$ cuya primera **coordenada** está en $A$, $a\in A$, y la segunda en $B$, $b\in B$, es decir $A \times B = \\{ (a,b)  |  a \in A \wedge b \in B \\}$.
@@ -338,13 +338,13 @@ Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}
 En una situación concreta, un **conjunto universal** $U$ es el que contiene a todos los posibles conjuntos del problema que tratamos.
 {{% /definition %}}
 
-![Conjunto universal](../images/universal_set.png)
+![Conjunto universal](../images/universal_set.svg)
 
 {{% definition %}}
 Fijado un conjunto universal $U$, el **complementario** de un conjunto $A$ se denota $\bar{A}$ o $A^c$ y se define como $\bar{A} = U\setminus A$.
 {{% /definition %}}
 
-![Complementario](../images/complement.png)
+![Complementario](../images/complement.svg)
 
 {{% proposition %}}
 Si tenemos fijado un conjunto universal $U$ entonces $A \setminus B = A \cap \bar{B}$.
@@ -415,7 +415,7 @@ $$A\stackrel{f}{\longrightarrow} B.$$
 
 El siguiente diagrama ilustra una aplicación
 
-![Aplicación](../images/map.png)
+![Aplicación](../images/map.svg)
 
 que se puede definir también del siguiente modo:
 
@@ -431,7 +431,7 @@ $$
 
 Sin embargo el diagrama siguiente no es una aplicación ya que la definición no se cumple por varias razones, ¿sabrías decir cuáles?
 
-![No aplicación](../images/no_map.png)
+![No aplicación](../images/no_map.svg)
 
 {{% watch %}}
 Para definir una aplicación hay que especificar lo siguiente:
@@ -599,11 +599,11 @@ Sea $f\colon A \rightarrow B$ una aplicación.
 
 En una aplicación inyectiva no puede ocurrir los siguiente:
 
-![Aplicación no inyectiva](../images/noinjective.png)
+![Aplicación no inyectiva](../images/noninjective.svg)
 
 En una sobreyectiva está prohibida la siguiente situación:
 
-![Aplicación no sobreyectiva](../images/nosurjective.png)
+![Aplicación no sobreyectiva](../images/nonsurjective.svg)
 
 {{% remark %}}
 En notación matemática, $f\colon A\rightarrow B$ es **inyectiva** si, dados $a,a'\in A$, $f(a)=f(a')\Rightarrow a=a'$, y $f$ es **sobreyectiva** si $\forall b\in B\\;\exists a\in A|f(a)=b$. Las flechas de las aplicaciones inyectivas se denotan $f\colon A\hookrightarrow B$ y las de las sobreyectivas $f\colon A\twoheadrightarrow B$.
@@ -692,9 +692,9 @@ es el subconjunto del codominio $f(U)=\\{b\in B\\;|\\;\exists a\in U|f(a)=b\\}\s
 La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
 {{% /definition %}}
 
-![Imagen directa](../images/direct_image.png)
+![Imagen directa](../images/direct_image.svg)
 
-![Imagen inversa](../images/inverse_image.png)
+![Imagen inversa](../images/inverse_image.svg)
 
 
 La imagen inversa recible otros nombres como **contraimagen**, **preimagen** o **anti-imagen**. La imagen directa también se denomina simplemente **imagen**.
@@ -780,7 +780,7 @@ Dados dos conjuntos $A$ y $B$, el **conjunto exponencial** es $B^A=\\{$aplicacio
 {{% example name="Un conjunto exponencial pequeño" %}}
 El conjunto exponencial $\\{a,b\\}^{\\{1,2\\}}=\\{f\_1,f\_2,f\_3,f\_4\\}$ está formado por las cuatro aplicaciones siguientes:
 
-![Conjunto exponencial](../images/exponential.png)
+![Conjunto exponencial](../images/exponential.svg)
 
 {{% /example %}}
 
@@ -803,7 +803,7 @@ $$G_f=\\{(a,b)\in A\times B | b=f(a) \\} \subset A\times B$$
 
 El grafo de la aplicación
 
-![Aplicación](../images/map.png)
+![Aplicación](../images/map.svg)
 
 es el conjunto
 
@@ -901,7 +901,7 @@ Una **partición** de $A$ es un subconjunto $P \subset \mathcal{P}(A)$ tal que:
 
 La siguiente es una partición de un conjunto $A$ formada por los subconjuntos $\\{E_1, E_2, E_3, E_4, E_5\\}$.
 
-![Partición](../images/partition.png)
+![Partición](../images/partition.svg)
 
 
 {{% proposition %}}
@@ -964,7 +964,7 @@ Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe el con
 {{% theorem name="Factorización canónica" %}}
 Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\\;\rightarrow \operatorname{im} f$ tal que el siguiente diagrama es conmutativo
 
-![Factorización canónica](../images/canonica.png)
+![Factorización canónica](../images/canonica.svg)
 
 es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además, la aplicación $\overline{f}$ es biyectiva.
 {{% /theorem %}}

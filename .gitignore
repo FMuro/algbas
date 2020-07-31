@@ -1,3 +1,6 @@
 public
 static/docs/latex.*
 !static/docs/latex.pdf
+pics/*
+!pics/pics.tex
+!pics/script.sh
