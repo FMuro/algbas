@@ -7,7 +7,7 @@ Estos apuntes están alojados en [GitLab](https://gitlab.com/), una plataforma d
 
 En el menú de la izquierda de cada página aparece un enlace <i class="fa fa-edit"></i> **Edita esta página** para editar su código en GitLab (tras darte de alta e ingresar en la plataforma). Aquí te explico lo que hay que saber para hacerlo.
 
-Tras incorporar los cambios a GitLab, y siempre que no haya errores, la versión actualizada de la página estará disponible [en esta dirección](https://FMuro.gitlab.io/estalg) al cabo de unos minutos.
+Tras incorporar los cambios a GitLab, y siempre que no haya errores, la versión actualizada de la página estará disponible [en esta dirección](https://basicalgebra.gitlab.io/algbas/) al cabo de unos minutos.
 
 ## Markdown básico
 
@@ -126,15 +126,14 @@ Es sencillo crear enlaces y referencias a entornos etiquetados o secciones:
 
 * Pulsa [aquí](#mi_def) para ir a la definición etiquetada *mi_def*. Aquí el código es `[aquí](#mi_def)`.
 
-
-Los dos últimos ejemplos enlazan a contenidos de esta misma página. Para hacer una referencia a algún entorno de otra página hay que indicar la ruta. Se puede enlazar al [criterio de Eisenstein](../rings/factorization/#eisenstein) desde aquí escribiendo `[criterio de Eisenstein](../rings/factorization/#eisenstein)` ya que es un teorema etiquetado *eisenstein* que está dentro del bloque de Factorización del tema de Anillos.
+Los dos últimos ejemplos enlazan a contenidos de esta misma página. Para hacer una referencia a algún entorno de otra página hay que indicar la ruta. Se puede enlazar al [criterio de Eisenstein](../polynomials/#eisenstein) desde aquí escribiendo `[criterio de Eisenstein](../polynomials/#eisenstein)` ya que es un teorema etiquetado *eisenstein* que está dentro del tema de Polinomios.
 
 También es fácil insertar imágenes alojadas dentro del proyecto:
 
-![esto es una imagen](../images/gaussian_primes.png)
+![esto es una imagen](../images/symmetric_difference.png)
 
 ```
-![esto es una imagen](../images/gaussian_primes.png)
+![esto es una imagen](../images/symmetric_difference.png)
 ```
 
 ## Edita en tu ordenador
@@ -145,14 +144,14 @@ Si vas a editar los apuntes de un modo más que ocasional, es probable que te re
 
 2. Abre una terminal  y ejecuta los siguientes comandos:
 ```
-$ git clone --recurse-submodules https://gitlab.com/FMuro/estalg.git
-$ cd estalg
+$ git clone --recurse-submodules https://gitlab.com/basicalgebra/algbas
+$ cd algbas
 $ hugo server
 ```
 
-3. Si pinchas [aquí](http://localhost:1313/estalg/) probablemente te aparecerá la vista previa en el navegador. Si no te aparece, mira los mensajes que genera el último comando. Debe aparecer una línea como la siguiente, que contiene la dirección web local correcta:
+3. Si pinchas [aquí](http://localhost:1313/algbas/) probablemente te aparecerá la vista previa en el navegador. Si no te aparece, mira los mensajes que genera el último comando. Debe aparecer una línea como la siguiente, que contiene la dirección web local correcta:
 ```
-Web Server is available at http://localhost:1313/estalg/ (bind address 127.0.0.1)
+Web Server is available at http://localhost:1313/algbas/ (bind address 127.0.0.1)
 ```
 
 Los ficheros de contenido se encuentran en el subdirectorio `contents`. Los puedes abrir y modificar con tu editor de texto favorito. Recuerda recargar la vista previa en el navegador cuando guardes los cambios.
