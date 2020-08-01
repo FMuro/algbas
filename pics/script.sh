@@ -13,7 +13,7 @@ for f in *.pdf; do
   pdftocairo \
   -png \
   -singlefile \
-  -scale-to-y 300 \
+  -scale-to-y 3000 \
   -scale-to-x -1 \
   "$f" "../../static/images/${f%.*}"
 done
