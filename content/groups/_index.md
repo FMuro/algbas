@@ -335,7 +335,7 @@ $$
 $$
 En la primera aparecen los números del $1$ al $n$. En la segunda fila, debajo de cada $i$ aparece $\sigma(i)$. En el ejemplo anterior $\sigma(1)=1$, $\sigma(2)=5$, $\sigma(3)=4$, etc.
 
-![Permutación](../images/permutation.svg)
+![Permutación](../images/permutation.png)
 
 El orden de las columnas no importa, es decir, la siguiente matriz denota la misma permutación que la anterior
 
@@ -383,7 +383,7 @@ $$
 {{% example name="Composición de permutaciones" %}}
 La composición de permutaciones se puede realizar de manera gráfica del siguiente modo,
 
-![Composición](../images/composition.svg)
+![Composición](../images/composition.png)
 
 Con la notación matricial, la composición en $S_n$ se puede llevar a cabo como en el siguiente ejemplo. Consideramos
 
@@ -469,27 +469,27 @@ Una **trasposición** es un ciclo de longitud 2.
 
 Un ejemplo de ciclo $(1\\; 2\\; 3\\; 4\\; 5)$ donde el soporte es el total:
 
-![Un ciclo](../images/cycle.svg)
+![Un ciclo](../images/cycle.png)
 
 Otro $(1\\; 3\\; 4\\; 5)$ donde el soporte es un subconjunto propio:
 
-![Otro ciclo](../images/cycle2.svg)
+![Otro ciclo](../images/cycle2.png)
 
 Otro ciclo más $(1\\; 4\\; 3\\; 5\\; 2)$ que ofrece un aspecto diferente debido al orden de sus entradas:
 
-![Otro ciclo más](../images/cycle3.svg)
+![Otro ciclo más](../images/cycle3.png)
 
 ¡El primer ejemplo de permutación que vimos también es un ciclo! Concretamente el $(2\\; 5\\; 3\\; 4)$:
 
-![Permutación](../images/permutation.svg)
+![Permutación](../images/permutation.png)
 
 Un ejemplo de trasposición $(3\\; 4)$ entre elementos consecutivos:
 
-![Un ciclo](../images/transposition.svg)
+![Un ciclo](../images/transposition.png)
 
 Un ejemplo de trasposición $(2\\; 4)$ entre elementos *no* consecutivos:
 
-![Otro ciclo](../images/transposition2.svg)
+![Otro ciclo](../images/transposition2.png)
 
 
 {{% watch %}}
@@ -498,7 +498,7 @@ La notación de ciclo no es única, por ejemplo $(x\_1 \\; x\_2 \\; x\_3)=(x\_3 
 
 Cualquier notación para los ciclos que quepa en una línea es intrínsecamente mala, lo ideal sería algo así:
 
-![Ciclos circulares](../images/circular_cycle.svg)
+![Ciclos circulares](../images/circular_cycle.png)
 
 
 {{% remark %}}
@@ -676,7 +676,7 @@ $i < j$ pero $\sigma (i) > \sigma (j)$.
 {{% example name="Inversiones" %}}
 Las inversiones se corresponden con los cruces en la representación de la permutación como diagrama de flechas:
 
-![Inversiones](../images/permutation_sign.svg)
+![Inversiones](../images/permutation_sign.png)
 
 Las inversiones de esta permutación son $(2,3)$, $(2,4)$, $(2,5)$, $(3,4)$ y $(3, 5)$.
 
@@ -688,7 +688,7 @@ Esto es así siempre que dibujemos el diagrama respetando las dos reglas siguien
 
 Estas configuraciones prohibidas se comprenden mejor con diagramas que muestran lo que *no* puede pasar:
 
-![Configuraciones prohibidas](../images/forbidden_permutations.svg)
+![Configuraciones prohibidas](../images/forbidden_permutations.png)
 
 Siempre podemos evitarlas moviendo un poco las flechas.
 {{% /example %}}
@@ -712,7 +712,7 @@ $$S_3=\\{(), (12), (13), (23), (123), (132)\\}.$$
 
 Las permutaciones pares de $S_3$ son $()$, $(123)$ y $(132)$ y las impares son $(12)$, $(13)$ y $(23)$.
 
-![S3](../images/s3.svg)
+![S3](../images/s3.png)
 
 {{% /example %}}
 
@@ -731,7 +731,7 @@ $$
 $$
 En total hay $1+2(j-i-1)$ inversiones, y este es un número impar.
 
-![Inversiones de una trasposición](../images/transsign.svg)
+![Inversiones de una trasposición](../images/transsign.png)
 
 {{% /proof %}}
 
@@ -747,7 +747,7 @@ Dadas dos permutaciones  $\sigma ,\tau\in S_n$:
 {{% proof %}}
 Consideremos el diagrama de $\sigma\tau$ que se obtiene dibujando el diagrama de $\tau$ encima del de $\sigma$. Este diagrama representa a la permutación $\sigma\tau$, aunque haya pares de flechas que se crucen dos veces, una en la parte de $\tau$ y otra en la de $\sigma$.
 
-![Composición](../images/composition.svg)
+![Composición](../images/composition.png)
 
 Las inversiones de $\sigma\tau$ se corresponden con los cruces de flechas que se cruzan solo en la parte de $\sigma$ o solo en la de $\tau$, pero no en ambas. Por tanto, para obtener el número de inversiones de $\sigma\tau$, hay que sumar los cruces de los diagramas de $\sigma$ y $\tau$ y restarle el número par de cruces entre flechas que se cruzan dos veces, una en la parte de $\sigma$ y otra en la de $\tau$. Esto prueba que el número de inversiones de $\sigma\tau$ tiene la misma paridad que la suma del número de inversiones de $\sigma$ y de $\tau$. De aquí se deduce la primera fórmula.
 
@@ -1490,7 +1490,7 @@ Veamos ahora una versión del teorema de factorización de aplicaciones para gru
 {{% theorem name="Primer teorema de isomorfía" label="groupsisomorph" %}}
 Dado un homomorfismo de grupos $f\colon G\to H$, existe un único homomorfismo $\overline{f}\colon G/\operatorname{ker} f\rightarrow \operatorname{im} f$ tal que el siguiente diagrama es conmutativo
 
-![Primer teorema de isomorfía](../images/isomorfiagrupos.svg)
+![Primer teorema de isomorfía](../images/isomorfiagrupos.png)
 
 es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además,  $\overline{f}$ es un isomorfismo.
 {{% /theorem %}}

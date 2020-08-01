@@ -104,7 +104,7 @@ $$A+B=(A\cup B)\setminus (A\cap B)$$
 
 
 
-![Diferencia simétrica](../images/symmetric_difference.svg)
+![Diferencia simétrica](../images/symmetric_difference.png)
 
 y el producto es la intersección,
 
@@ -508,7 +508,7 @@ Es más, dado $m\in\mathbb{Z}$, $[m]=[r]$, donde $r$ es el resto no negativo de 
 {{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
 Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\operatorname{ker} f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**,
 
-![Primer teorema de isomorfía para anillos](../images/isomorfianillos.svg)
+![Primer teorema de isomorfía para anillos](../images/isomorfianillos.png)
 
 Aquí $\pi$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}

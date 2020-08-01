@@ -130,10 +130,10 @@ Los dos últimos ejemplos enlazan a contenidos de esta misma página. Para hacer
 
 También es fácil insertar imágenes alojadas dentro del proyecto:
 
-![esto es una imagen](../images/symmetric_difference.svg)
+![esto es una imagen](../images/symmetric_difference.png)
 
 ```
-![esto es una imagen](../images/symmetric_difference.svg)
+![esto es una imagen](../images/symmetric_difference.png)
 ```
 
 ## Edita en tu ordenador
