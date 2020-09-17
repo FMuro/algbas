@@ -26,7 +26,7 @@ que ha de satisfacer las propiedades siguentes:
 
 Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$. En este caso también es frecuente sustituir el símbolo $\star$ por una mera yuxtaposición de símbolos, es decir $x\star y=xy$. 
 
-{{% example name="Ejemplos de grupos" %}}
+{{% example name="Ejemplos de grupos" label="examplegroups"%}}
 Los siguientes son algunos grupos bien conocidos:
 
 * $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$ y $\mathbb{C}$ son grupos con la operación suma $+$. En este caso el elemento neutro es el **cero** $0$. El simétrico de un elemento $x$ es su **opuesto** $-x$. Esta notación se denomina **aditiva** frente a la usada en la definición de grupo, que es la **multiplicativa**.
@@ -307,6 +307,8 @@ Usando que $(x^{-1})^{-1}=x$, deducimos que $o(x)=o((x^{-1})^{-1})\leq o(x^{-1})
 {{% definition %}}
 Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=y\star x$ para todo $x,y\in G$.
 {{% /definition %}}
+
+De los ejemplos de grupo que aparecen al principio de la sección, el único grupo que no es abeliano es $GL(n,k)$.
 
 {{% example name="Grupo producto" label="productgroup" %}}
 Dados dos grupos $(G,\star)$ y $(H,\ast)$, el **producto cartesiano** $G\times H$ es un grupo con la siguiente operación binaria:
