@@ -261,10 +261,11 @@ x^n&=&x^{m\cdot k}\cr
 $$
 
 
-$\Rightarrow$
-Si $n=0$ el resultado se tiene porque todo entero divide al $0$. Si no, podemos suponer que $n$ es positivo ya que el signo no afecta a la divisibilidad y además, si $n$ fuera negativo,  $x^{-n}=(x^n)^{-1}=e^{-1}=e$.
+$\Rightarrow$ Sea $n\in \mathbb{Z}$ tal que $x^n=e$. Tenemos que probar que $m$ divide a $n$. Vamos a distinguir tres casos:
 
-Por definición de orden $n\geq m$. Sean $c$ y $r$ el cociente y el resto de la división de $n$ por $m$, $n=m\cdot c+r$. El resto satisface $0\leq r < m$. Basta probar que $r=0$. Por reducción al absurdo, si $r>0$ entonces
+\begin{itemize}
+\item Si $n=0$ el resultado se tiene porque todo entero divide al $0$. 
+\item Supongamos que $n>0$. Por definición de orden $n\geq m$. Sean $c$ y $r$ el cociente y el resto de la división de $n$ por $m$, $n=m\cdot c+r$. El resto satisface $0\leq r < m$. Basta probar que $r=0$. Por reducción al absurdo, si $r>0$ entonces
 $$
 \begin{array}{rcl}
 x^r&=&x^{n-m\cdot c}\cr
@@ -273,7 +274,12 @@ x^r&=&x^{n-m\cdot c}\cr
 &=&e.
 \end{array}
 $$
-Como $0<r<m$, esto contradice $o(x)=m$.
+Como $0<r< m$, esto contradice $o(x)=m$.
+
+\item Supongamos que $n<0$. Entonces $x^{-n}=(x^n)^{-1}=e^{-1}=e$. Como $-n>0$, hemos visto arriba que $m$ divide a $-n$. Como el signo no afecta a la divisibilidad, se tiene el resultado que queríamos probar. 
+\end{itemize}
+
+
 {{% /proof %}}
 
 {{% proposition %}}
