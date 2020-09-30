@@ -7,25 +7,25 @@
 \contentsline {chapter}{\numberline {2}Grupos}{37}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Definiciones básicas}{37}{section.2.1}%
 \contentsline {section}{\numberline {2.2}El grupo simétrico}{43}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Ciclos y trasposiciones}{45}{section.2.3}%
-\contentsline {section}{\numberline {2.4}El signo de una permutación}{52}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Subgrupos}{56}{section.2.5}%
-\contentsline {section}{\numberline {2.6}El teorema de Lagrange}{59}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Homomorfismos}{62}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Grupos cociente}{68}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Enteros}{75}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Anillos}{75}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Homomorfismos}{80}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Ideales}{82}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Cocientes}{84}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Dominios}{87}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Ideales primos}{89}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Divisibilidad en \(\symbb {Z}\)}{90}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Divisor común máximo}{94}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Primos}{100}{section.3.9}%
-\contentsline {section}{\numberline {3.10}Congruencias}{103}{section.3.10}%
-\contentsline {chapter}{\numberline {4}Polinomios}{109}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Anillos de polinomios}{109}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Irreducibles}{116}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Coeficientes complejos y reales}{117}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Coeficientes enteros y racionales}{119}{section.4.4}%
+\contentsline {section}{\numberline {2.3}Ciclos y trasposiciones}{46}{section.2.3}%
+\contentsline {section}{\numberline {2.4}El signo de una permutación}{53}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Subgrupos}{57}{section.2.5}%
+\contentsline {section}{\numberline {2.6}El teorema de Lagrange}{60}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Homomorfismos}{63}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Grupos cociente}{69}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Enteros}{77}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Anillos}{77}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Homomorfismos}{82}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Ideales}{84}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Cocientes}{86}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Dominios}{89}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Ideales primos}{91}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Divisibilidad en \(\symbb {Z}\)}{92}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Divisor común máximo}{96}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Primos}{102}{section.3.9}%
+\contentsline {section}{\numberline {3.10}Congruencias}{105}{section.3.10}%
+\contentsline {chapter}{\numberline {4}Polinomios}{111}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Anillos de polinomios}{111}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Irreducibles}{118}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Coeficientes complejos y reales}{119}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Coeficientes enteros y racionales}{121}{section.4.4}%
