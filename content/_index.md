@@ -5,7 +5,7 @@ Esta web contiene las notas de clase de la asignatura obligatoria [Álgebra Bás
 {{< button href="./docs/latex.pdf" align="center" >}} Versión PDF {{< /button >}}<br>
 
 {{% watch %}}
-Esta web está **en construcción**. El contenido actual es incompleto, puede contener erratas y será modificado para su mejora sin previo aviso. Se recomienda recargar la web cada día que se consulte para evitar que el ordenador muestre copias antiguas almacenadas en la caché. La versión en PDF se genera automáticamente y puede contener errores derivados del proceso de conversion.
+Esta web está **en desarrollo**. El contenido actual puede contener erratas y será modificado para su mejora sin previo aviso. Se recomienda recargar la web cada día que se consulte para evitar que el navegador muestre copias antiguas almacenadas en la caché. La versión en PDF se genera automáticamente y puede contener errores derivados del proceso de conversion.
 {{% /watch %}}
 
 ## Cómo manejarse
