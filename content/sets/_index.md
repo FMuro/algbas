@@ -78,7 +78,7 @@ Un conjunto es **unitario** si contiene un único elemento, como por ejemplo $\\
 
 
 {{% definition %}}
-Dados dos conjuntos $A$ y $B$, decimos que $A$ está **contenido** en $B$ o que $A$ es un **subconjunto** de $B$, y lo denotamos $A\subset B$, si todo elemento de $A$ pertenece a $B$, es decir $x\in A \Rightarrow x\in B$.
+Dados dos conjuntos $A$ y $B$, decimos que $A$ está **contenido** o **incluído** en $B$ o que $A$ es un **subconjunto** de $B$, y lo denotamos $A\subset B$, si todo elemento de $A$ pertenece a $B$, es decir $x\in A \Rightarrow x\in B$.
 {{% /definition %}}
 
 {{% watch %}}
