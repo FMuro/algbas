@@ -510,7 +510,7 @@ $$
 Una aplicación $f \colon  A \rightarrow B$ es **invertible** si existe $g \colon B \rightarrow A$ tal que
 $g \circ f = 1_A$ y $f \circ g = 1_B$,
 
-$${}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}\limits^f\_g B\circlearrowleft\_{1\_B}$$
+$${}\_{1\_A}\\!\\!\circlearrowright A\mathop{\rightleftarrows}\limits^f\_g B\circlearrowleft\_{1\_B}$$
 
 {{% /definition %}}
 
@@ -534,7 +534,7 @@ $$
 Si $f \colon  A \rightarrow B$ es invertible su aplicación **inversa**  $f^{-1} \colon B \rightarrow A$ es la única que satisface
 $f^{-1} \circ f = 1_A$ y $f \circ f^{-1} = 1_B$,
 
-$${}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}\limits^f\_{f^{-1}} B\circlearrowleft\_{1\_B}$$
+$${}\_{1\_A}\\!\\!\circlearrowright A\mathop{\rightleftarrows}\limits^f\_{f^{-1}} B\circlearrowleft\_{1\_B}$$
 
 {{% /definition %}}
 
@@ -662,7 +662,7 @@ A\times B&\cong &B\times A,\cr
 \end{array}
 $$
 
-Decimos pues que el producto cartesiano es conmutativo *salvo biyección*. Lo mismo ocurre con la asociatividad del producto cartesiano,
+Decimos pues que el producto cartesiano no es conmutativo *salvo biyección*. Lo mismo ocurre con la asociatividad del producto cartesiano,
 
 $$
 \begin{array}{rcl}
