@@ -939,7 +939,7 @@ $$f\colon A\stackrel{\pi}\longrightarrow A/R\stackrel{\overline{f}}\longrightarr
 {{% proof %}}
 Vamos a suponer que $\overline{f}$ existe y cumple las propiedades indicadas. De ahí deduciremos una fórmula forzosa para $\overline{f}$, con lo cual de existir será única. Luego veremos que la fórmula tiene sentido, luego $\overline{f}$ existirá.
 
-Si $f=\overline{f}\circ\pi$ entonces dado $a\in A$,
+Si $f=\overline{f}\circ\pi$ entonces dado $x\in A$,
 $$
 \begin{array}{rcl}
 f(x)&=&(\overline{f}\circ\pi)(x)\cr
@@ -970,7 +970,7 @@ es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónic
 {{% /theorem %}}
 
 {{% proof %}}
-Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\operatorname{im} f$ como $f'(x)=f(x)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(x)=i(f(x))=f(x)$ para todo $x\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$.
+Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\operatorname{im} f$ como $f'(x)=f(x)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f')(x)=i(f'(x))=f(x)$ para todo $x\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$.
 
 El teorema anterior se puede aplicar a $f'\colon A\rightarrow\operatorname{im} f$ y a $\sim\_{f}$. Esto da lugar a una aplicación $\overline{f}\colon A/\sim\_f\rightarrow \operatorname{im} f$ que satisface $f'=\overline{f}\circ\pi$, así que $f=i\circ f'=i\circ(\overline{f}\circ\pi)$. La aplicación $\overline{f}$ es la única que se descompone de este modo, ya que la propia descomposición fuerza una fórmula para su definición. En efecto, dado $x\in A$,
 $$
