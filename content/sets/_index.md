@@ -889,6 +889,19 @@ Aquí identificamos los conjuntos cociente del ejemplo de arriba, en algunos cas
 
 {{% /example %}}
 
+{{% example name="Los racionales como cociente" %}}
+Quizá el primer conjunto cociente que uno estudia en matemáticas (sin saberlo) es $\mathbb{Q}$, que se define como el cociente de $\mathbb{Z}\times (\mathbb{Z}\setminus\\{0\\})$ por la relación de equivalencia
+$$(a,b)\sim(c,d)\Leftrightarrow ad=bc.$$
+Es decir,
+$$\mathbb{Q}=\frac{\mathbb{Z}\times (\mathbb{Z}\setminus\\{0\\})}{\sim}.$$
+Las clases de equivalencia en este cociente se denotan habitualmente
+$$\frac{a}{b}=[(a,b)].$$
+{{% /example %}}
+
+{{% exercise %}}
+Demuestra que la relación $\sim$ del ejemplo anterior es de equivalencia. ¿Te atreverías a definir $\mathbb{R}$ como un cociente?
+{{% /exercise %}}
+
 
 {{% definition %}}
 Una **partición** de $A$ es un subconjunto $P \subset \mathcal{P}(A)$ tal que:
