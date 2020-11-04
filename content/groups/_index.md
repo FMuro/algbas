@@ -3,6 +3,153 @@ title = "Grupos"
 weight = 20
 +++
 
+Consideremos el conjunto $GL(2,\mathbb{Q})$ formado por las matrices $2\times 2$ con entradas racionales y determinante no nulo,
+$$GL(2,\mathbb{Q})=\left\\{
+        \left(
+                \begin{array}{cc}
+                        a&b\cr 
+                        c&d
+                \end{array}
+        \right)
+                \mid 
+                a,b,c,d\in\mathbb{Q}\text{ y }ad-bc\neq0
+        \right\\}.$$
+Dadas $A,B\in GL(2,\mathbb{Q})$ su **producto** $AB\in GL(2,\mathbb{Q})$. Esta operación satisface la propiedad **asociativa** 
+$$(AB)C=A(BC).$$
+La **matriz identidad**
+$$
+I=
+\left(
+        \begin{array}{cc}
+                1&0\cr 
+                0&1
+        \end{array}
+\right)$$
+cumple que
+$$AI=A=IA.$$
+Es más, dada una matriz cualquiera $A$ existe otra $A^{-1}$, su **inversa**, tal que
+$$AA^{-1}=I=A^{-1}A.$$
+Se puede calcular mediante la fórmula siguiente,
+$$
+A=
+\left(
+        \begin{array}{cc}
+                a&b\cr 
+                c&d
+        \end{array}
+\right),
+\qquad
+A^{-1}=
+\frac{1}{ad-bc}\left(
+        \begin{array}{rr}
+                d&-b\cr 
+                -c&a
+        \end{array}
+\right).$$
+
+En general, el producto de matrices no satisface la propiedad **conmutativa**, 
+$$AB\neq BA.$$
+Por ejemplo
+$$
+\begin{array}{rcl}
+\left(
+        \begin{array}{cc}
+                1&1\cr 
+                0&1
+        \end{array}
+\right)
+\left(
+        \begin{array}{rr}
+                1&0\cr 
+                -1&1
+        \end{array}
+\right)&=&
+\left(
+        \begin{array}{rr}
+                0&1\cr 
+                -1&1
+        \end{array}
+\right)\cr
+&\neq&
+\left(
+        \begin{array}{rr}
+                1&1\cr 
+                -1&0
+        \end{array}
+\right)\cr 
+&=&
+\left(
+        \begin{array}{rr}
+                1&0\cr 
+                -1&1
+        \end{array}
+\right)
+\left(
+        \begin{array}{cc}
+                1&1\cr 
+                0&1
+        \end{array}
+\right).
+\end{array}
+$$
+
+La existencia de inversos permite despejar elementos de ecuaciones *siempre que se encuentren en el mismo lado*,
+$$AB=AC\Rightarrow B=C,$$
+$$AC=BC\Rightarrow A=B.$$
+Es lo que se nomina propiedad **cancelativa**.
+
+En general
+$$AB=CA\not\Rightarrow B=C.$$
+Por ejemplo,
+$$\left(
+        \begin{array}{cc}
+                1&1\cr 
+                0&1
+        \end{array}
+\right)
+\left(
+        \begin{array}{rr}
+                1&0\cr 
+                -1&1
+        \end{array}
+\right)=
+\left(
+        \begin{array}{rr}
+                1&0\cr 
+                -1&1
+        \end{array}
+\right)=
+\left(
+        \begin{array}{rr}
+                0&1\cr 
+                -1&2
+        \end{array}
+\right)
+\left(
+        \begin{array}{cc}
+                1&1\cr 
+                0&1
+        \end{array}
+\right)$$
+pero
+$$
+\left(
+        \begin{array}{cc}
+                1&1\cr 
+                0&1
+        \end{array}
+\right)\neq
+\left(
+        \begin{array}{rr}
+                0&1\cr 
+                -1&2
+        \end{array}
+\right).
+$$
+
+
+A un conjunto con una operación binaria que satisface las propiedades del producto de matrices en $GL(2,\mathbb{Q})$ lo denominaremos **grupo**. Es la primera estructura algebraica que vemos en esta asignatura y este tema se centra en su estudio.
+
 ## Definiciones básicas
 
 {{% definition %}}
@@ -174,7 +321,7 @@ Las **potencias** positivas de un elemento de un grupo $x\in G$ se definen como
 
 $$x^n=x\star\stackrel{n}{\cdots}\star x,\quad n>0.$$
 
-Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las potencias satisfacen $x^mx^n=x^{m+n}$ y $(x^m)^n=x^{mn}$ para $m,n\in\mathbb{Z}$ cualesquiera. Además $x^{1}=x$ y $x^{-1}$ su inverso.
+Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las potencias satisfacen $x^m\star x^n=x^{m+n}$ y $(x^m)^n=x^{mn}$ para $m,n\in\mathbb{Z}$ cualesquiera. Además $x^{1}=x$ y $x^{-1}$ su inverso.
 
 
 {{% definition %}}
