@@ -1090,7 +1090,7 @@ Ya lo hemos probado si $a$ o $b$ no es nulo. Es fácil comprobar a partir de la 
 ## Primos
 
 {{% definition %}}
-Un entero $p\in\mathbb{Z}$ es **primo** si y solo si $p\neq\pm1$ y $p$ solo es divisible por $\pm p$ y por $\pm 1$.
+Un entero $p\in\mathbb{Z}$ es **primo** si $p\neq\pm1$ y $p$ solo es divisible por $\pm p$ y por $\pm 1$.
 {{% /definition %}}
 
 {{% remark %}}

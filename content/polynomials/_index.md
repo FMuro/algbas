@@ -64,7 +64,7 @@ Dados $D,d\in k[ x ]$, $d\neq0$, existen $c,r\in k[ x ]$ únicos tales que
 
 * $D=d\cdot c+r$,
 
-* $\deg( r )<\deg(d)$.
+* $r=0$ o $\deg( r )<\deg(d)$.
 
 {{% /theorem %}}
 
@@ -160,11 +160,12 @@ Todo ideal $I \subset k[ x ]$ es principal.
 
 {{% proof %}}
 El ideal trivial es principal $\\{0\\}=(0)$ generado por el $0$. Si $I\neq\\{0\\}$, consideramos el conjunto
-Sea
+
 
 $$S=\\{\deg(f)\mid 0\neq f\in I \\}\subset\mathbb{Z}.$$
 
-Por el principio de buena ordenación, hay un mínimo $n\in S$. Sea $f\in I$ un polinomio no nulo donde se alcanza el mínimo $\deg(f)=n$. Veamos que $(f) = I$. Por definición, $(f)$ está formado por los múltiplos de $f$. La inclusión $\subset$ es cierta ya que $f\in I$ y $I\subset k[ x ]$ es un ideal, por tanto los múltiplos de $f$ están también en $I$. Para ver $\supset$, tenemos que comprobar que todos los elementos de $I$ son múltiplos de $f$. Sea $g\in I$. Realizamos la división euclídea de $g$ por $f$: $g=f\cdot c+r$, $\deg( r )<n$. Si $r=0$ entonces $g=f\cdot c\in (f)$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. En efecto, en dicho caso $0\neq r=g-f\cdot c\in I$ pues $g\in I$, $f\cdot c\in (f) \subset I$ y $I$ es un ideal. Por tanto $\deg( r )\in S$, pero $\deg( r )<n$, y esto contradeciría la minimalidad de $n$.
+Este conjunto está acotado inferiormente porque el grado de un polinomio es $\geq 0$. Por el principio de buena ordenación, hay un mínimo $n\in S$. Sea $f\in I$ un polinomio no nulo donde se alcanza el mínimo $\deg(f)=n$. Veamos que $(f) = I$. Por definición, $(f)$ está formado por los múltiplos de $f$. La inclusión $\subset$ es cierta ya que $f\in I$ y $I\subset k[ x ]$ es un ideal, por tanto los múltiplos de $f$ están también en $I$. Para ver $\supset$, tenemos que comprobar que todos los elementos de $I$ son múltiplos de $f$. Sea $g\in I$. Realizamos la división euclídea de $g$ por $f$: $g=f\cdot c+r$, 
+$\deg( r )<n$. Si $r=0$ entonces $g=f\cdot c\in (f)$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. En efecto, en dicho caso $0\neq r=g-f\cdot c\in I$ pues $g\in I$, $f\cdot c\in (f) \subset I$ y $I$ es un ideal. Por tanto $\deg( r )\in S$, pero $\deg( r )<n$, y esto contradeciría la minimalidad de $n$.
 {{% /proof %}}
 
 {{% definition %}}
@@ -190,7 +191,7 @@ y sabemos que $r=f(a)=0$ si y solo si $(x-a)|f$.
 {{% /proof %}}
 
 {{% remark %}}
-En general, los divisores de grado $1$ de un polinomio $f\in k[ x ]$ se corresponden con sus raíces, ya que $(ax-b)|f$, $a\neq 0$, si y solo si $(x-\frac{b}{a})|f$, pues para la relación de divisibilidad es irrelevante el producto por unidades.
+En general, los divisores de grado $1$ de un polinomio $f\in k[ x ]$ se corresponden con sus raíces, ya que $(ax+b)|f$, $a\neq 0$, si y solo si $(x+\frac{b}{a})|f$, es decir, si $-\frac{a}{b}$ es una raíz de $f$. Aquí usamos que, para la relación de divisibilidad, es irrelevante el producto por unidades.
 {{% /remark %}}
 
 El corolario anterior justifica la siguiente definición, que se usará más adelante.
@@ -242,30 +243,54 @@ $$2x^2 +3=f\cdot \frac{54}{37}+g\cdot \left(-\frac{27}{37}x^2-\frac{9}{37}x+\fra
 
 {{% /example %}}
 
+El Teorema de Euclides, visto para números enteros, también es cierto en nuestro contexto, con la misma demostración basada en la identidad de Bézout.
+
+{{% theorem name="de Euclides" label="euclides_polynomial" %}}
+Si $f,g,h\in k[ x ]$ son tales que $f|gh$ y $\operatorname{mcd}(f,g)=1$ entonces $f|h$.
+{{% /theorem %}}
+
+
 
 
 ## Irreducibles
 
-{{% definition %}}
-{Polinomio irreducible}
-Sea $f\in k[ x ]$. Decimos que $f$ es **primo** si solo es divisible por $\alpha$ y $\alpha\cdot f$, $\alpha\in k^\times$. Decimos que $f$ es **irreducible** si no es nulo y además, si $f=gh$ entonces bien $g$ o bien $h$ es una unidad.
+{{% definition label="Polinomio irreducible" %}}
+Sea $f\in k[ x ]$. Decimos que $f$ es **primo** si no es una unidad y solo es divisible por $\alpha$ y $\alpha\cdot f$, $\alpha\in k^\times$. Decimos que $f$ es **irreducible** si no es nulo y además, si $f=gh$ entonces bien $g$ o bien $h$ es una unidad.
 {{% /definition %}}
 
 {{% remark %}}
-El $0$ no es primo y $f\in k[ x ]$ es primo si y solo si lo es $\alpha\cdot f$, $\alpha\in k^\times$. Los polinomios de grado $1$ son todos irreducibles por la fórmula del grado de un producto. Los resultados elementales sobre primos y divisibilidad que vimos en $\mathbb{Z}$ siguien siendo ciertos en $k[ x ]$, con alguna salvedad que reflejamos en los enunciados de los resultados siguientes.
+El $0$ no es primo y $f\in k[ x ]$ es primo si y solo si lo es $\alpha\cdot f$, $\alpha\in k^\times$. Como las unidades de $k[ x ]$ son los polinomios de grado $0$, un polinomio no nulo $f\in k[ x ]$ es **reducible** si y solo si $f=gh$ donde $\deg(f),\deg(g)\geq 1$. En particular, los polinomios de grado $1$ son todos irreducibles. Los resultados elementales sobre primos y divisibilidad que vimos en $\mathbb{Z}$ siguien siendo ciertos en $k[ x ]$, con alguna salvedad que reflejamos en los enunciados de los resultados siguientes.
 {{% /remark %}}
+
+{{% proposition %}}
+Si un polinomio $f\in k[ x ]$ de $\deg(f)\geq 2$ posee una raíz entonces no es irreducible.
+{{% /proposition %}}
+
+{{% proof %}}
+Si $a\in k$ es una raíz, $(x-a)\mid f$, así que $f=(x-a)g$. Por la fórmula del grado, $\deg(g)\geq 1$, así que $f$ es reducible.
+{{% /proof %}}
 
 {{% proposition %}}
 Un polinomio $f\in k[ x ]$ de grado $2$ o $3$ es irreducile si y solo si no tiene raíces en $k$.
 {{% /proposition %}}
 
 {{% proof %}}
-Demostraremos ambas implicaciones por reducción al absurdo.
+$\Rightarrow$ es consecuencia de la proposición anterior.
 
-$\Rightarrow$ Si $a\in k$ es una raíz de $f$ entonces $f=(x-a)g$, luego $2\leq \deg(f)=1+\deg(g)$, así que $g$ no puede ser una unidad, pues tendría grado $0$, luego $f$ sería reducible.
-
-$\Leftarrow$ Supongamos que $f$ es reducible y por tanto se descompone como $f=gh$, donde $g$ y $h$ no son unidades y por tanto $\deg(g),\deg(h)\geq 1$. Entonces $3\geq \deg{f}=\deg{g}+\deg(h)$, por tanto bien $\deg(g)=1$ o bien $\deg(h)=1$, así que $f$ tiene alguna raíz en $k$.
+$\Leftarrow$ Supongamos, por reducción al absurdo, que $f$ es reducible. Entonces $f=gh$ con $\deg(f),\deg(g)\geq 1$. Como $3\geq \deg{f}=\deg{g}+\deg(h)$ deducimos que bien $\deg(g)=1$ o bien $\deg(h)=1$, así que $f$ tiene alguna raíz en $k$.
 {{% /proof %}}
+
+La siguiente proposición se demuestra igual que su análogo para números enteros.
+
+{{% proposition %}}
+Dados dos polinomios $f,g\in k[ x ]$ con $f$ primo, si $f\nmid g$ entonces $\operatorname{mcd}(f,g)=1$.
+{{% /proposition %}}
+
+El siguiente corolario se es consecuencia de esta proposición y del Teorema de Euclides.
+
+{{% corollary %}}
+Si $f,g,h\in k [ x ]$ son tales que $f$ es primo, $f|gh$ y $f\nmid g$, entonces $f|h$.
+{{% /corollary %}}
 
 {{% proposition %}}
 Un polinomio no nulo $f\in k[ x ]$ es primo si y solo si es irreducible.
@@ -276,6 +301,27 @@ $\Rightarrow$ Si $f=gh$, como $f|gh$ entonces $f|g$ o $f|h$. Como los papeles de
 
 $\Leftarrow$ Supongamos que $g|f$, es decir, $f=gc$ para cierto $c\in k[ x ]$. Como $f$ no es nulo, $g$ y $c$ tampoco. Si $\deg(g)=0$ entonces $g$ es una constante no nula, es decir una unidad. Si $\deg(g)=\deg(f)$ entonces $c$ es una unidad, $c\in k^\times$, por el mismo argumento, así que $g=c^{-1}f$. Queda por analizar qué ocurre si $0<\deg (g)<\deg(f)$. Como $\deg(f)=\deg(g)+\deg( c )$, entonces también $0<\deg ( c )<\deg(f)$, por lo que $g$ y $c$ no serían unidades. Esto contradeciría la irreducibilidad de $f$.
 {{% /proof %}}
+
+{{% proposition %}}
+Dados dos polinomios $f,g\in k[ x ]$, con $g\neq 0$, la clase $[ f ]$ es una unidad en $k[ x ]/(g)$ si y solo si $\gcd(f,g)=1$.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Leftarrow$ Tomamos una identidad de Bézout, $1=fh+gl$, $h,l\in k[ x ]$, y consideramos su clase en el cociente, $[ 1 ]=[ fh+gl ]=[ f  h ] + [ g l ]=[ f ][ h ]$. Aquí usamos que $[ g l ]=[ 0 ]$ porque $gl\in (f)$. Esto prueba que $[ f ]$ es invertible y que $[ h ]$ es su inverso.
+
+$\Rightarrow$ Si $[ h ]$ la inversa de $[ f ]$. Entonces $[ f h ] = [ 1 ]$, es decir, $g\mid(fh-1)$. Dicho de otro modo, $fh=1-gl$ para cierto $l\in k[ x ]$. Si $\gcd(f,g)=d$ entonces $d\mid(fh+gl)=1$, por tanto $d$ es una unidad, así que podemos tomar $d=1$.
+{{% /proof %}}
+
+{{% proposition %}}
+Un polinomio no nulo $f\in k[ x ]$ es irreducible si y solo si el anillo cociente $k[ x ]/(f)$ es un cuerpo.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Rightarrow$ Veamos que todo elemento no nulo del cociente es invertible. La clase de un polinomio $[ g ]$ es no trivial si y solo si $f\nmid g$. En ese caso, por ser $f$ primo, $\gcd(f,g)=1$ y $[ g  ]$ es una unidad en el cociente por la proposición anterior. 
+
+$\Leftarrow$ Por reducción al absurdo. Si $f$ es reducible entonces $f=gh$ con $\deg(g),\deg(h)\geq 1$. Por la fórmula del grado de un producto, $\deg(g) < \deg(f)$ así que, como $g$ no puede ser cero, $f\nmid g$, por tanto $[ g ]\neq [ 0 ]$ en el cociente. Como $\gcd(f,g)=g$, que no es constante, $[ g ]$ no puede ser una unidad en el cociente. Esto es una contradicción porque todos los elementos no nulos de un cuerpo son unidades.
+{{% /proof %}}
+
 
 El siguiente teorema se prueba igual que para $\mathbb{Z}$, reemplazando el valor absoluto por el grado.
 
