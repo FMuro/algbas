@@ -191,7 +191,7 @@ y sabemos que $r=f(a)=0$ si y solo si $(x-a)|f$.
 {{% /proof %}}
 
 {{% remark %}}
-En general, los divisores de grado $1$ de un polinomio $f\in k[ x ]$ se corresponden con sus raíces, ya que $(ax+b)|f$, $a\neq 0$, si y solo si $(x+\frac{b}{a})|f$, es decir, si $-\frac{a}{b}$ es una raíz de $f$. Aquí usamos que, para la relación de divisibilidad, es irrelevante el producto por unidades.
+En general, los divisores de grado $1$ de un polinomio $f\in k[ x ]$ se corresponden con sus raíces, ya que $(ax+b)|f$, $a\neq 0$, si y solo si $(x+\frac{b}{a})|f$, es decir, si $-\frac{b}{a}$ es una raíz de $f$. Aquí usamos que, para la relación de divisibilidad, es irrelevante el producto por unidades.
 {{% /remark %}}
 
 El corolario anterior justifica la siguiente definición, que se usará más adelante.
