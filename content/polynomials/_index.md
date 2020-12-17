@@ -25,13 +25,13 @@ El polinomio trivial no tiene asignado ningún grado según esta definición, pe
 
 Recordemos que el conjunto $R[ x ]$ es un anillo con la suma y el producto definidos en un ejemplo [anterior](../rings/#polynomials). Además $R\subset R[ x ]$ es un subanillo formado por los polinomios constantes. Hemos visto en la prueba de una [proposición](../rings/#polydomain) anterior que si $R$ es un dominio entonces $R[ x ]$ también y dados $f,g\in R[ x ]$ se tiene que
 
-$$\deg(fg)=\deg(f)+\deg(g).$$
+$$\operatorname{grado}(fg)=\operatorname{grado}(f)+\operatorname{grado}(g).$$
 
 Además,
 
-$$\deg(f+g)\leq\max\\{\deg(f),\deg(g)\\}$$
+$$\operatorname{grado}(f+g)\leq\max\\{\operatorname{grado}(f),\operatorname{grado}(g)\\}$$
 
-dándose la igualdad si $\deg(f)\neq deg(g)$, ya que entonces el coeficiente líder de la suma será el mismo que el del polinomio de mayor grado.
+dándose la igualdad si $\operatorname{grado}(f)\neq deg(g)$, ya que entonces el coeficiente líder de la suma será el mismo que el del polinomio de mayor grado.
 
 {{% theorem %}}
 Si $R$ es un dominio entonces $R[ x ]^\times=R^\times$.
@@ -41,14 +41,14 @@ Si $R$ es un dominio entonces $R[ x ]^\times=R^\times$.
 Las unidades de $R$ también son unidades de $R[ x ]$ vistas como polinomios constantes ya que $R\subset R[ x ]$ es un subanillo. Recíprocamente, si $f\in R[ x ]$ es una unidad y $f^{-1}$ es su inversa, $ff^{-1}=1$ entonces
 $$
 \begin{array}{rcl}
-0&=&\deg(1)\cr
-&=&\deg(ff^{-1})\cr
-&=&\deg(f)+\deg(f^{-1}).
+0&=&\operatorname{grado}(1)\cr
+&=&\operatorname{grado}(ff^{-1})\cr
+&=&\operatorname{grado}(f)+\operatorname{grado}(f^{-1}).
 \end{array}
 $$
 Por tanto
 
-$$\deg(f)=-\deg(f^{-1}).$$
+$$\operatorname{grado}(f)=-\operatorname{grado}(f^{-1}).$$
 
 Como el grado de un polinomio es siempre $\geq 0$, los grados que aparecen a ambos lados de la última ecuación han de ser $0$, así que $f$ es una unidad de $R$.
 {{% /proof %}}
@@ -64,12 +64,12 @@ Dados $D,d\in k[ x ]$, $d\neq0$, existen $c,r\in k[ x ]$ únicos tales que
 
 * $D=d\cdot c+r$,
 
-* $r=0$ o $\deg( r )<\deg(d)$.
+* $r=0$ o $\operatorname{grado}( r )<\operatorname{grado}(d)$.
 
 {{% /theorem %}}
 
 {{% proof %}}
-Probamos primero la existencia. Si $\deg(D)<\deg(d)$ podemos tomar $c=0$, $r=D$. Supongamos ahora que $\deg(D)\geq\deg(d)$. Denotamos $\deg(D)=n$ y $\deg(d)=m$. Sean y sean $a\_nx^n$ y $b\_mx^m$ los monomios líderes de $D$ y $d$, respectivamente. Llamamos
+Probamos primero la existencia. Si $\operatorname{grado}(D)<\operatorname{grado}(d)$ podemos tomar $c=0$, $r=D$. Supongamos ahora que $\operatorname{grado}(D)\geq\operatorname{grado}(d)$. Denotamos $\operatorname{grado}(D)=n$ y $\operatorname{grado}(d)=m$. Sean y sean $a\_nx^n$ y $b\_mx^m$ los monomios líderes de $D$ y $d$, respectivamente. Llamamos
 
 $$c\_1=\frac{a\_n}{b\_m}x^{n-m}.$$
 
@@ -81,11 +81,11 @@ es de grado estrictamente menor que $D$ ya que los monomios líderes de los poli
 
 $$D=d\cdot c\_1+D\_1.$$
 
-Si $\deg(D\_1)<\deg(d)$ entonces podemos tomar  y $r=D\_1$. Si $\deg(D\_1)\geq \deg(d)$, construimos polinomios $c\_2$ y $D\_2$ por el mismo procedimiento, de modo que
+Si $\operatorname{grado}(D\_1)<\operatorname{grado}(d)$ entonces podemos tomar  y $r=D\_1$. Si $\operatorname{grado}(D\_1)\geq \operatorname{grado}(d)$, construimos polinomios $c\_2$ y $D\_2$ por el mismo procedimiento, de modo que
 
 $$D\_1=d\cdot c\_2+D\_2,$$
 
-y si fuera necesario continuamos hasta que $\deg(D\_n)<\deg(d)$. Este procedimiento termina en un número finito de pasos porque $\deg(D\_{i+1})<\deg(D\_{i})$ por construcción. Llegados a este punto
+y si fuera necesario continuamos hasta que $\operatorname{grado}(D\_n)<\operatorname{grado}(d)$. Este procedimiento termina en un número finito de pasos porque $\operatorname{grado}(D\_{i+1})<\operatorname{grado}(D\_{i})$ por construcción. Llegados a este punto
 
 $$
 \begin{array}{rcl}
@@ -102,11 +102,11 @@ Veamos ahora la unicidad. Supongamos que
 
 $$D=d\cdot c+r=d\cdot c'+r'$$
 
-con $\deg( r ),\deg(r')<\deg(d)$. Entonces
+con $\operatorname{grado}( r ),\operatorname{grado}(r')<\operatorname{grado}(d)$. Entonces
 
 $$r-r'=(c'-c)d.$$
 
-Si $c\neq c'$ entonces el polinomio de la derecha tiene grado $\geq \deg(d)$, pero el de la izquierda tiene grado $\leq\max\\{\deg( r ),\deg(r')\\}<\deg(d)$, así que la única posibilidad es que $c=c'$ y por tanto $r=r'$.
+Si $c\neq c'$ entonces el polinomio de la derecha tiene grado $\geq \operatorname{grado}(d)$, pero el de la izquierda tiene grado $\leq\max\\{\operatorname{grado}( r ),\operatorname{grado}(r')\\}<\operatorname{grado}(d)$, así que la única posibilidad es que $c=c'$ y por tanto $r=r'$.
 {{% /proof %}}
 
 {{% remark %}}
@@ -126,15 +126,15 @@ dos polinomios de $\mathbb{Q}[ x ]$. Comenzamos tomando
 
 $$D\_1=D-\frac{1}{2}x^2\cdot d=\frac{1}{3}x^4-2x^3+\frac{5}{2}x^2-3x+3.$$
 
-Como $\deg(D\_1)\geq\deg (d)$, tomamos ahora
+Como $\operatorname{grado}(D\_1)\geq\operatorname{grado} (d)$, tomamos ahora
 
 $$D\_2=D\_1-\frac{1}{6}x\cdot d=-\frac{17}{9}x^3+2x^2-\frac{17}{6}x+3.$$
 
-De nuevo $\deg(D\_2)\geq\deg (d)$, así que tomamos
+De nuevo $\operatorname{grado}(D\_2)\geq\operatorname{grado} (d)$, así que tomamos
 
 $$D\_3=D\_2+\frac{17}{18}\cdot d=\frac{37}{27} x^2+\frac{37}{18}.$$
 
-Como finalmente $\deg(D\_3)<\deg(d)$, podemos tomar
+Como finalmente $\operatorname{grado}(D\_3)<\operatorname{grado}(d)$, podemos tomar
 
 $$
 \begin{array}{rcl}
@@ -162,10 +162,10 @@ Todo ideal $I \subset k[ x ]$ es principal.
 El ideal trivial es principal $\\{0\\}=(0)$ generado por el $0$. Si $I\neq\\{0\\}$, consideramos el conjunto
 
 
-$$S=\\{\deg(f)\mid 0\neq f\in I \\}\subset\mathbb{Z}.$$
+$$S=\\{\operatorname{grado}(f)\mid 0\neq f\in I \\}\subset\mathbb{Z}.$$
 
-Este conjunto está acotado inferiormente porque el grado de un polinomio es $\geq 0$. Por el principio de buena ordenación, hay un mínimo $n\in S$. Sea $f\in I$ un polinomio no nulo donde se alcanza el mínimo $\deg(f)=n$. Veamos que $(f) = I$. Por definición, $(f)$ está formado por los múltiplos de $f$. La inclusión $\subset$ es cierta ya que $f\in I$ y $I\subset k[ x ]$ es un ideal, por tanto los múltiplos de $f$ están también en $I$. Para ver $\supset$, tenemos que comprobar que todos los elementos de $I$ son múltiplos de $f$. Sea $g\in I$. Realizamos la división euclídea de $g$ por $f$: $g=f\cdot c+r$, 
-$\deg( r )<n$. Si $r=0$ entonces $g=f\cdot c\in (f)$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. En efecto, en dicho caso $0\neq r=g-f\cdot c\in I$ pues $g\in I$, $f\cdot c\in (f) \subset I$ y $I$ es un ideal. Por tanto $\deg( r )\in S$, pero $\deg( r )<n$, y esto contradeciría la minimalidad de $n$.
+Este conjunto está acotado inferiormente porque el grado de un polinomio es $\geq 0$. Por el principio de buena ordenación, hay un mínimo $n\in S$. Sea $f\in I$ un polinomio no nulo donde se alcanza el mínimo $\operatorname{grado}(f)=n$. Veamos que $(f) = I$. Por definición, $(f)$ está formado por los múltiplos de $f$. La inclusión $\subset$ es cierta ya que $f\in I$ y $I\subset k[ x ]$ es un ideal, por tanto los múltiplos de $f$ están también en $I$. Para ver $\supset$, tenemos que comprobar que todos los elementos de $I$ son múltiplos de $f$. Sea $g\in I$. Realizamos la división euclídea de $g$ por $f$: $g=f\cdot c+r$, 
+$\operatorname{grado}( r )<n$. Si $r=0$ entonces $g=f\cdot c\in (f)$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. En efecto, en dicho caso $0\neq r=g-f\cdot c\in I$ pues $g\in I$, $f\cdot c\in (f) \subset I$ y $I$ es un ideal. Por tanto $\operatorname{grado}( r )\in S$, pero $\operatorname{grado}( r )<n$, y esto contradeciría la minimalidad de $n$.
 {{% /proof %}}
 
 {{% definition %}}
@@ -183,7 +183,7 @@ Realizamos la división euclídea
 
 $$f(x)=(x-a)\cdot q+r.$$
 
-Como $\deg( r )<\deg(x-a)=1$, el polinomio $r$ es constante $r\in k$, así que
+Como $\operatorname{grado}( r )<\operatorname{grado}(x-a)=1$, el polinomio $r$ es constante $r\in k$, así que
 
 $$f(a)=(a-a)\cdot q(a)+r=r,$$
 
@@ -205,7 +205,7 @@ Un polinomio no nulo $f\in k[ x ]$ de grado $n$ tiene a lo sumo $n$ raíces dist
 {{% /corollary %}}
 
 {{% proof %}}
-Por inducción en $n=\deg(f)$. Si $n=0$, entonces $f$ es un polinomio constante no nulo, luego no tiene raíces. Sea ahora $n>0$. Suponemos, por hipótesis de inducción, que todo polinomio de grado $n-1$ tiene a lo sumo $n-1$ raíces distintas. Si $f$ no tuviera raíces no habría nada que probar. Si $f$ tiene una raíz $a\in k$ entonces $f=(x-a)g$ para cierto polinomio $g$, necesariamente de grado $n-1$. Bastará probar que las raíces de $f$ son las raíces de $g$ y además $a$. En efecto, $b\in k$ es una raíz de $f$ si y solo si $f(b)=(b-a)g(b)=0$. Como $k$ es un dominio, para que esto ocurra ha de suceder bien que $g(b)=0$ o bien que $b=a$.
+Por inducción en $n=\operatorname{grado}(f)$. Si $n=0$, entonces $f$ es un polinomio constante no nulo, luego no tiene raíces. Sea ahora $n>0$. Suponemos, por hipótesis de inducción, que todo polinomio de grado $n-1$ tiene a lo sumo $n-1$ raíces distintas. Si $f$ no tuviera raíces no habría nada que probar. Si $f$ tiene una raíz $a\in k$ entonces $f=(x-a)g$ para cierto polinomio $g$, necesariamente de grado $n-1$. Bastará probar que las raíces de $f$ son las raíces de $g$ y además $a$. En efecto, $b\in k$ es una raíz de $f$ si y solo si $f(b)=(b-a)g(b)=0$. Como $k$ es un dominio, para que esto ocurra ha de suceder bien que $g(b)=0$ o bien que $b=a$.
 {{% /proof %}}
 
 {{% proposition label="derivada" %}}
@@ -287,15 +287,15 @@ Sea $f\in k[ x ]$. Decimos que $f$ es **primo** si no es una unidad y solo es di
 {{% /definition %}}
 
 {{% remark %}}
-El $0$ no es primo y $f\in k[ x ]$ es primo si y solo si lo es $\alpha\cdot f$, $\alpha\in k^\times$. Como las unidades de $k[ x ]$ son los polinomios de grado $0$, un polinomio no nulo $f\in k[ x ]$ es **reducible** si y solo si $f=gh$ donde $\deg(f),\deg(g)\geq 1$. En particular, los polinomios de grado $1$ son todos irreducibles. Los resultados elementales sobre primos y divisibilidad que vimos en $\mathbb{Z}$ siguien siendo ciertos en $k[ x ]$, con alguna salvedad que reflejamos en los enunciados de los resultados siguientes.
+El $0$ no es primo y $f\in k[ x ]$ es primo si y solo si lo es $\alpha\cdot f$, $\alpha\in k^\times$. Como las unidades de $k[ x ]$ son los polinomios de grado $0$, un polinomio no nulo $f\in k[ x ]$ es **reducible** si y solo si $f=gh$ donde $\operatorname{grado}(f),\operatorname{grado}(g)\geq 1$. En particular, los polinomios de grado $1$ son todos irreducibles. Los resultados elementales sobre primos y divisibilidad que vimos en $\mathbb{Z}$ siguien siendo ciertos en $k[ x ]$, con alguna salvedad que reflejamos en los enunciados de los resultados siguientes.
 {{% /remark %}}
 
 {{% proposition %}}
-Si un polinomio $f\in k[ x ]$ de $\deg(f)\geq 2$ posee una raíz entonces no es irreducible.
+Si un polinomio $f\in k[ x ]$ de $\operatorname{grado}(f)\geq 2$ posee una raíz entonces no es irreducible.
 {{% /proposition %}}
 
 {{% proof %}}
-Si $a\in k$ es una raíz, $(x-a)\mid f$, así que $f=(x-a)g$. Por la fórmula del grado, $\deg(g)\geq 1$, así que $f$ es reducible.
+Si $a\in k$ es una raíz, $(x-a)\mid f$, así que $f=(x-a)g$. Por la fórmula del grado, $\operatorname{grado}(g)\geq 1$, así que $f$ es reducible.
 {{% /proof %}}
 
 {{% proposition %}}
@@ -305,7 +305,7 @@ Un polinomio $f\in k[ x ]$ de grado $2$ o $3$ es irreducile si y solo si no tien
 {{% proof %}}
 $\Rightarrow$ es consecuencia de la proposición anterior.
 
-$\Leftarrow$ Supongamos, por reducción al absurdo, que $f$ es reducible. Entonces $f=gh$ con $\deg(f),\deg(g)\geq 1$. Como $3\geq \deg{f}=\deg{g}+\deg(h)$ deducimos que bien $\deg(g)=1$ o bien $\deg(h)=1$, así que $f$ tiene alguna raíz en $k$.
+$\Leftarrow$ Supongamos, por reducción al absurdo, que $f$ es reducible. Entonces $f=gh$ con $\operatorname{grado}(f),\operatorname{grado}(g)\geq 1$. Como $3\geq \operatorname{grado}{f}=\operatorname{grado}{g}+\operatorname{grado}(h)$ deducimos que bien $\operatorname{grado}(g)=1$ o bien $\operatorname{grado}(h)=1$, así que $f$ tiene alguna raíz en $k$.
 {{% /proof %}}
 
 La siguiente proposición se demuestra igual que su análogo para números enteros.
@@ -325,19 +325,19 @@ Un polinomio no nulo $f\in k[ x ]$ es primo si y solo si es irreducible.
 {{% /proposition %}}
 
 {{% proof %}}
-$\Rightarrow$ Si $f=gh$, como $f|gh$ entonces $f|g$ o $f|h$. Como los papeles de $g$ y $h$ son intercambiables, podemos suponer que $f|g$, es decir $g=fc$. Entonces $f=gh=fc h$. Como $f$ no es nulo, el resto de polinomios tampoco. Tenemos que $\deg(f)=\deg(f)+\deg( c )+\deg(h)$. Al ser el grado de un polinomio no nulo $\geq 0$ deducimos que $\deg( c )=\deg(h)=0$. Es decir, $h$ es una constante no nula, y por tanto una unidad.
+$\Rightarrow$ Si $f=gh$, como $f|gh$ entonces $f|g$ o $f|h$. Como los papeles de $g$ y $h$ son intercambiables, podemos suponer que $f|g$, es decir $g=fc$. Entonces $f=gh=fc h$. Como $f$ no es nulo, el resto de polinomios tampoco. Tenemos que $\operatorname{grado}(f)=\operatorname{grado}(f)+\operatorname{grado}( c )+\operatorname{grado}(h)$. Al ser el grado de un polinomio no nulo $\geq 0$ deducimos que $\operatorname{grado}( c )=\operatorname{grado}(h)=0$. Es decir, $h$ es una constante no nula, y por tanto una unidad.
 
-$\Leftarrow$ Supongamos que $g|f$, es decir, $f=gc$ para cierto $c\in k[ x ]$. Como $f$ no es nulo, $g$ y $c$ tampoco. Si $\deg(g)=0$ entonces $g$ es una constante no nula, es decir una unidad. Si $\deg(g)=\deg(f)$ entonces $c$ es una unidad, $c\in k^\times$, por el mismo argumento, así que $g=c^{-1}f$. Queda por analizar qué ocurre si $0<\deg (g)<\deg(f)$. Como $\deg(f)=\deg(g)+\deg( c )$, entonces también $0<\deg ( c )<\deg(f)$, por lo que $g$ y $c$ no serían unidades. Esto contradeciría la irreducibilidad de $f$.
+$\Leftarrow$ Supongamos que $g|f$, es decir, $f=gc$ para cierto $c\in k[ x ]$. Como $f$ no es nulo, $g$ y $c$ tampoco. Si $\operatorname{grado}(g)=0$ entonces $g$ es una constante no nula, es decir una unidad. Si $\operatorname{grado}(g)=\operatorname{grado}(f)$ entonces $c$ es una unidad, $c\in k^\times$, por el mismo argumento, así que $g=c^{-1}f$. Queda por analizar qué ocurre si $0<\operatorname{grado} (g)<\operatorname{grado}(f)$. Como $\operatorname{grado}(f)=\operatorname{grado}(g)+\operatorname{grado}( c )$, entonces también $0<\operatorname{grado} ( c )<\operatorname{grado}(f)$, por lo que $g$ y $c$ no serían unidades. Esto contradeciría la irreducibilidad de $f$.
 {{% /proof %}}
 
 {{% proposition %}}
-Dados dos polinomios $f,g\in k[ x ]$, con $g\neq 0$, la clase $[ f ]$ es una unidad en $k[ x ]/(g)$ si y solo si $\gcd(f,g)=1$.
+Dados dos polinomios $f,g\in k[ x ]$, con $g\neq 0$, la clase $[ f ]$ es una unidad en $k[ x ]/(g)$ si y solo si $\operatorname{mcd}(f,g)=1$.
 {{% /proposition %}}
 
 {{% proof %}}
 $\Leftarrow$ Tomamos una identidad de Bézout, $1=fh+gl$, $h,l\in k[ x ]$, y consideramos su clase en el cociente, $[ 1 ]=[ fh+gl ]=[ f  h ] + [ g l ]=[ f ][ h ]$. Aquí usamos que $[ g l ]=[ 0 ]$ porque $gl\in (f)$. Esto prueba que $[ f ]$ es invertible y que $[ h ]$ es su inverso.
 
-$\Rightarrow$ Si $[ h ]$ la inversa de $[ f ]$. Entonces $[ f h ] = [ 1 ]$, es decir, $g\mid(fh-1)$. Dicho de otro modo, $fh=1-gl$ para cierto $l\in k[ x ]$. Si $\gcd(f,g)=d$ entonces $d\mid(fh+gl)=1$, por tanto $d$ es una unidad, así que podemos tomar $d=1$.
+$\Rightarrow$ Si $[ h ]$ la inversa de $[ f ]$. Entonces $[ f h ] = [ 1 ]$, es decir, $g\mid(fh-1)$. Dicho de otro modo, $fh=1-gl$ para cierto $l\in k[ x ]$. Si $\operatorname{mcd}(f,g)=d$ entonces $d\mid(fh+gl)=1$, por tanto $d$ es una unidad, así que podemos tomar $d=1$.
 {{% /proof %}}
 
 {{% proposition %}}
@@ -345,9 +345,9 @@ Un polinomio no nulo $f\in k[ x ]$ es irreducible si y solo si el anillo cocient
 {{% /proposition %}}
 
 {{% proof %}}
-$\Rightarrow$ Veamos que todo elemento no nulo del cociente es invertible. La clase de un polinomio $[ g ]$ es no trivial si y solo si $f\nmid g$. En ese caso, por ser $f$ primo, $\gcd(f,g)=1$ y $[ g  ]$ es una unidad en el cociente por la proposición anterior. 
+$\Rightarrow$ Veamos que todo elemento no nulo del cociente es invertible. La clase de un polinomio $[ g ]$ es no trivial si y solo si $f\nmid g$. En ese caso, por ser $f$ primo, $\operatorname{mcd}(f,g)=1$ y $[ g  ]$ es una unidad en el cociente por la proposición anterior. 
 
-$\Leftarrow$ Por reducción al absurdo. Si $f$ es reducible entonces $f=gh$ con $\deg(g),\deg(h)\geq 1$. Por la fórmula del grado de un producto, $\deg(g) < \deg(f)$ así que, como $g$ no puede ser cero, $f\nmid g$, por tanto $[ g ]\neq [ 0 ]$ en el cociente. Como $\gcd(f,g)=g$, que no es constante, $[ g ]$ no puede ser una unidad en el cociente. Esto es una contradicción porque todos los elementos no nulos de un cuerpo son unidades.
+$\Leftarrow$ Por reducción al absurdo. Si $f$ es reducible entonces $f=gh$ con $\operatorname{grado}(g),\operatorname{grado}(h)\geq 1$. Por la fórmula del grado de un producto, $\operatorname{grado}(g) < \operatorname{grado}(f)$ así que, como $g$ no puede ser cero, $f\nmid g$, por tanto $[ g ]\neq [ 0 ]$ en el cociente. Como $\operatorname{mcd}(f,g)=g$, que no es constante, $[ g ]$ no puede ser una unidad en el cociente. Esto es una contradicción porque todos los elementos no nulos de un cuerpo son unidades.
 {{% /proof %}}
 
 
@@ -404,7 +404,7 @@ Los polinomios irreducibles de $\mathbb{C}[ x ]$ son los de grado $1$.
 {{% /corollary %}}
 
 {{% proof %}}
-Sabemos que los polinomios de grado $1$ son irreducibles. Si $f$ es de grado $>1$ y $a$ es una raíz de $f$ entonces $f=(x-a)g$. Como $\deg(f)=\deg(x-a)+\deg(g)=1+\deg(g)$ entonces $\deg(g)\geq 1$, así que ni $x-a$ ni $g$ son unidades, por lo que $f$ no es irreducible.
+Sabemos que los polinomios de grado $1$ son irreducibles. Si $f$ es de grado $>1$ y $a$ es una raíz de $f$ entonces $f=(x-a)g$. Como $\operatorname{grado}(f)=\operatorname{grado}(x-a)+\operatorname{grado}(g)=1+\operatorname{grado}(g)$ entonces $\operatorname{grado}(g)\geq 1$, así que ni $x-a$ ni $g$ son unidades, por lo que $f$ no es irreducible.
 {{% /proof %}}
 
 {{% corollary %}}
@@ -416,13 +416,13 @@ donde $a\_i,b\in\mathbb{C}$, $b\neq 0$.
 {{% /corollary %}}
 
 {{% corollary %}}
-Un polinomio no nulo $f\in\mathbb{C}[ x ]$ posee una raíz con multiplicidad $>1$ si y solo si $\gcd(f,f')\neq 1$.
+Un polinomio no nulo $f\in\mathbb{C}[ x ]$ posee una raíz con multiplicidad $>1$ si y solo si $\operatorname{mcd}(f,f')\neq 1$.
 {{% /corollary %}}
 
 {{% proof %}}
-$\Rightarrow$ Si $a$ es una raíz con multiplicidad $>1$ entonces $(x-1)\mid\gcd(f,f')$ por [una proposición anterior](#derivada).
+$\Rightarrow$ Si $a$ es una raíz con multiplicidad $>1$ entonces $(x-1)\mid\operatorname{mcd}(f,f')$ por [una proposición anterior](#derivada).
 
-$\Leftarrow$ Si $d=\gcd(f,f')\neq 1$ entonces $\deg(d)\geq 1$ por tanto, por el teorema fundamental del álgebra, tiene alguna raíz $a\in\mathbb{C}$. Esto prueba que $(x-a)\mid d=\gcd(f,f')$, así que $(x-a)\mid f$ y $(x-a)\mid f'$, luego $a$ es una raíz de $f$ de multiplicidad $>1$ por la [proposición](#derivada) antes mencionada.
+$\Leftarrow$ Si $d=\operatorname{mcd}(f,f')\neq 1$ entonces $\operatorname{grado}(d)\geq 1$ por tanto, por el teorema fundamental del álgebra, tiene alguna raíz $a\in\mathbb{C}$. Esto prueba que $(x-a)\mid d=\operatorname{mcd}(f,f')$, así que $(x-a)\mid f$ y $(x-a)\mid f'$, luego $a$ es una raíz de $f$ de multiplicidad $>1$ por la [proposición](#derivada) antes mencionada.
 {{% /proof %}}
 
 Observa que $\mathbb{R}[ x ]\subset\mathbb{C}[ x ]$ pues $\mathbb{R}\subset\mathbb{C}$. Esto nos permite hablar de raíces complejas de polinomios con coeficientes reales.
