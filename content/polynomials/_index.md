@@ -208,6 +208,34 @@ Un polinomio no nulo $f\in k[ x ]$ de grado $n$ tiene a lo sumo $n$ raíces dist
 Por inducción en $n=\deg(f)$. Si $n=0$, entonces $f$ es un polinomio constante no nulo, luego no tiene raíces. Sea ahora $n>0$. Suponemos, por hipótesis de inducción, que todo polinomio de grado $n-1$ tiene a lo sumo $n-1$ raíces distintas. Si $f$ no tuviera raíces no habría nada que probar. Si $f$ tiene una raíz $a\in k$ entonces $f=(x-a)g$ para cierto polinomio $g$, necesariamente de grado $n-1$. Bastará probar que las raíces de $f$ son las raíces de $g$ y además $a$. En efecto, $b\in k$ es una raíz de $f$ si y solo si $f(b)=(b-a)g(b)=0$. Como $k$ es un dominio, para que esto ocurra ha de suceder bien que $g(b)=0$ o bien que $b=a$.
 {{% /proof %}}
 
+{{% proposition label="derivada" %}}
+Si $k=\mathbb{Q},\mathbb{R}$ o $\mathbb{C}$ y $f\in k[ x ]$ es un polinomio no nulo, $a\in k$ es una raíz de $f$ con multiplicidad $>1$ si y solo si $a$ es raíz de $f$ y de su derivada $f'$.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Rightarrow$ En este caso $(x-a)^2\mid f$, así que $f=(x-a)^2g$ para cierto $g\in k[ x ]$. Derivando,
+
+$$f'=2(x-a)g+(x-a)^2g=(x-a)[2g+(x-a)g'],$$
+
+así que $a$ es también raíz de $f'$.
+
+$\Leftarrow$ Si $a$ es raíz de $f$ entonces $f=(x-a)g$ para cierto $g\in k[ x ]$ y 
+$$f'=g+(x-a)g'.$$
+Si $a$ también es raíz de $f'$ entonces $(x-a)\mid f'$ por tanto $x-a$ también divide a
+
+$$g=f'-(x-a)g',$$
+
+en particular $g=(x-a)h$ para cierto $h\in k[ x ]$, así que $f=(x-a)g=(x-a)^2h$, con lo que la multiplicidad $a$ como raíz de $f$ es $>1$.
+
+{{% /proof %}}
+
+{{% remark %}}
+El resultado anterior es cierto para cualquier cuerpo $k$. Lo hemos probado para los cuerpos especificados porque son aquellos para los que conocéis una definición de derivada, pero es posible definir la derivada de un polinomio con coeficientes en un anillo cualquiera.
+{{% /remark %}}
+
+{{% exercise %}}
+¿Verdadero o falso? Si un polinomio mónico $f\in \mathbb{C}[ x ]$ de grado $n$ posee una raíz en común con todas sus derivadas iteradas entonces $f=(x-a)^n$ para cierto $a\in\mathbb{C}$. Observa que el recíproco es trivial.
+{{% /exercise %}}
 
 {{% remark %}}
 Los conceptos de **divisor común máximo** y **múltiplo común mínimo** en $k[ x ]$ se definen como en $\mathbb{Z}$ y satisfacen las mismas propieades, excepto las que ahora señalamos. Estos conceptos están bien definidos salvo producto por unidades. Si $d$ y $d'$ son dos divisores comunes máximos de $f,g\in k[ x ]$ entonces existe $\alpha\in k^\times$ tal que $d'=\alpha\cdot d$, e igual para los múltiplos comunes mínimos. Además, $\operatorname{mcd}(f,g)=\operatorname{mcd}(\alpha\cdot f,\beta\cdot g)$ para todo $\alpha,\beta\in k^\times$. Destacamos que el divisor común máximo se puede calcular medialte el **algoritmo de Euclides** y que satisface la **identidad de Bézout**.
@@ -386,6 +414,16 @@ $$f=b\prod_{i=1}^n(x-a\_i)$$
 
 donde $a\_i,b\in\mathbb{C}$, $b\neq 0$.
 {{% /corollary %}}
+
+{{% corollary %}}
+Un polinomio no nulo $f\in\mathbb{C}[ x ]$ posee una raíz con multiplicidad $>1$ si y solo si $\gcd(f,f')\neq 1$.
+{{% /corollary %}}
+
+{{% proof %}}
+$\Rightarrow$ Si $a$ es una raíz con multiplicidad $>1$ entonces $(x-1)\mid\gcd(f,f')$ por [una proposición anterior](#derivada).
+
+$\Leftarrow$ Si $d=\gcd(f,f')\neq 1$ entonces $\deg(d)\geq 1$ por tanto, por el teorema fundamental del álgebra, tiene alguna raíz $a\in\mathbb{C}$. Esto prueba que $(x-a)\mid d=\gcd(f,f')$, así que $(x-a)\mid f$ y $(x-a)\mid f'$, luego $a$ es una raíz de $f$ de multiplicidad $>1$ por la [proposición](#derivada) antes mencionada.
+{{% /proof %}}
 
 Observa que $\mathbb{R}[ x ]\subset\mathbb{C}[ x ]$ pues $\mathbb{R}\subset\mathbb{C}$. Esto nos permite hablar de raíces complejas de polinomios con coeficientes reales.
 
