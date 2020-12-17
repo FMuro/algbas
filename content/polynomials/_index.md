@@ -31,7 +31,7 @@ Además,
 
 $$\operatorname{grado}(f+g)\leq\max\\{\operatorname{grado}(f),\operatorname{grado}(g)\\}$$
 
-dándose la igualdad si $\operatorname{grado}(f)\neq deg(g)$, ya que entonces el coeficiente líder de la suma será el mismo que el del polinomio de mayor grado.
+dándose la igualdad si $\operatorname{grado}(f)\neq \operatorname{grado}(g)$, ya que entonces el coeficiente líder de la suma será el mismo que el del polinomio de mayor grado.
 
 {{% theorem %}}
 Si $R$ es un dominio entonces $R[ x ]^\times=R^\times$.
