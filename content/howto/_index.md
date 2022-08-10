@@ -7,7 +7,7 @@ Estos apuntes están alojados en [GitLab](https://gitlab.com/), una plataforma d
 
 En el menú de la izquierda de cada página aparece un enlace <i class="fa fa-edit"></i> **Edita esta página** para editar su código en GitLab (tras darte de alta e ingresar en la plataforma). Aquí te explico lo que hay que saber para hacerlo.
 
-Tras incorporar los cambios a GitLab, y siempre que no haya errores, la versión actualizada de la página estará disponible [en esta dirección](https://basicalgebra.gitlab.io/algbas/) al cabo de unos minutos.
+Tras incorporar los cambios a GitLab, y siempre que no haya errores, la versión actualizada de la página estará disponible [en esta dirección](https://FMuro.gitlab.io/algbas/) al cabo de unos minutos.
 
 ## Markdown básico
 
@@ -144,7 +144,7 @@ Si vas a editar los apuntes de un modo más que ocasional, es probable que te re
 
 2. Abre una terminal  y ejecuta los siguientes comandos:
 ```
-$ git clone --recurse-submodules https://gitlab.com/basicalgebra/algbas
+$ git clone --recurse-submodules https://gitlab.com/FMuro/algbas
 $ cd algbas
 $ hugo server
 ```
