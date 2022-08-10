@@ -4,7 +4,7 @@
 
 2. Abre una terminal  y ejecuta los siguientes comandos:
 ```
-$ git clone --recurse-submodules https://gitlab.com/basicalgebra/algbas.git
+$ git clone --recurse-submodules https://gitlab.com/FMuro/algbas.git
 $ cd algbas
 $ hugo server
 ```
@@ -18,4 +18,4 @@ Los ficheros de contenido se encuentran en el subdirectorio `contents`. Los pued
 
 La organización de `contents` en subdirectorios y ficheros se corresponde con la distribución jerárquica del contenido de la web, reflejada en la barra lateral. Esto también explica el encabezamiento de los ficheros de contenido, que aparece rodeado con `+++`.
 
-GitLab también genera periódicamente una versión de la web [en esta dirección](https://basicalgebra.gitlab.io/algbas/), pero los cambios en los ficheros no se reflejan instantáneamente, sino al cabo de unos minutos.
+GitLab también genera periódicamente una versión de la web [en esta dirección](https://FMuro.gitlab.io/algbas/), pero los cambios en los ficheros no se reflejan instantáneamente, sino al cabo de unos minutos.
